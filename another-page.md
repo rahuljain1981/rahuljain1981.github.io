@@ -1,13 +1,16 @@
 ---
-layout: default
+title: "Introduction"
+author: "chinsoon12"
+date: "April 10, 2016"
+output: html_document
 ---
 
-## Welcome to another page
+<<insertHTML:[blog.html]
 
-My Another page is here
+etc, etc, etc
 
-{% include blog.html %}
+```{r, echo=FALSE}
+htmltools::includeHTML("blog.html")
+```
 
-_yay_
-
-[back](./)
+etc, etc, etc

@@ -1,6 +1,4 @@
 ---
-output: 
-  html_document:
-    includes: 
-       after_body: blog.html
+output: html_document
 ---
+htmltools::includeHTML(blog.html)

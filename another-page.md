@@ -1,4 +1,4 @@
 ---
-output: html_document
+layout: post
 ---
-htmltools::includeHTML(blog.html)
+I'm in here.

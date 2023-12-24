@@ -1,16 +1,6 @@
 ---
-title: "Introduction"
-author: "chinsoon12"
-date: "April 10, 2016"
-output: html_document
+output: 
+  html_document:
+    includes: 
+       after_body: blog.html
 ---
-
-<<insertHTML:[blog.html]
-
-etc, etc, etc
-
-```{r, echo=FALSE}
-htmltools::includeHTML("blog.html")
-```
-
-etc, etc, etc

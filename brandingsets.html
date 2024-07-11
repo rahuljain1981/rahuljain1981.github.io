@@ -34,10 +34,7 @@ layout: default
         display: contents;
     }
 
-    .table-header div, .table-row div {
-        padding: 12px 15px;
-        
-    }
+    
 /**
     .table-header {
         background-color: #f4f4f4;
@@ -48,19 +45,30 @@ layout: default
         background-color: #f9f9f9;
     }*/
 
+    .col1{
+      padding: 12px 15px;
+    }
+
 .col2{
-  width: 860;
+  width: 860px;
+  padding: 12px 15px;
 }
 
     @media (max-width: 800px) {
       .table {
           grid-template-columns: 1fr;
       }
+      .col2{
+        width: 720px;
+      }
   }
 
   @media (max-width: 500px) {
       .table {
           grid-template-columns: 1fr;
+      }
+      .col2{
+        width: 420px;
       }
   }
     </style>

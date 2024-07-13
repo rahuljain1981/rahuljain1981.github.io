@@ -193,70 +193,111 @@ layout: default
       <span id="SpaneuAl" data-clientid="SpaneuAl" data-displayname="Text" class="react-grid-item ltr  false   " style="display: block;z-index: 1;width: fit-content;height: fit-content;min-height: 10px;min-width: 16px;position: relative;margin: 0 auto;">
          <p>Key Highlights</p>
       </span>
-      <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding   " id="Divf9nZ" data-clientid="Divf9nZ" data-displayname="Flex - Horizontal" style="display: flex; z-index: 1; height: auto; width: 100%; margin: 0px; max-width: 1200px; position: relative;">
-         <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding   " id="Divwk85" data-clientid="Divwk85" data-displayname="Flex - Horizontal" style="display: flex; z-index: 1; height: auto; width: 100%; margin: 0px; max-width: 380px; position: relative;">
-            <span id="Spanrh5g" data-clientid="Spanrh5g" data-displayname="Text" class="react-grid-item ltr  false   keyhighlights" style="display: block; z-index: 1; width: auto; height: fit-content; min-height: 30px; min-width: 16px; position: relative; margin: 0px;">
-               <p style="text-align: center;
-                  font-weight: bold;
-                  font-size: 125%;">Dynamic Carousel Creation</p>
-               <p>Easily create and manage carousel banners based on predefined configurations.<br/>
+      <style>
+         .myhighlights[data-clientId="Divf9nZ"] {
+             display: flex;
+             flex-direction: row;
+             flex-wrap: wrap;
+             justify-content: center;
+             column-gap: 21px;
+             row-gap: 39px;
+             padding-top: 50px;
+             max-width: 1200px;
+             margin: 0 auto;
+         }
+         
+         .myhighlights [data-clientId="Spanrh5g"] {
+             font-family: Raleway, sans-serif;
+             font-size: 16px;
+             font-weight: 400;
+             color: #000;
+             line-height: 26px;
+             padding: 20px;
+             background-color: #ffce31;
+             border-radius: 10px;
+             border: 1px solid #00000019;
+             text-align: center;
+             height: 200px;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+         }
+         
+         .myhighlights  [data-clientId="Divwk85"] {
+             display: flex;
+             flex-direction: column;
+             max-width: 380px;
+             width: 100%;
+             margin: 0;
+         }
+         
+         .myhighlights .keyhighlights p {
+             margin: 0;
+         }
+         
+         .myhighlights .keyhighlights-title {
+             font-weight: bold;
+             font-size: 1.25em;
+             margin-bottom: 10px;
+         }
+         
+         .myhighlights .keyhighlights-content {
+             font-size: 1em;
+         }
+         </style>
+         
+         <div class="myhighlights" data-type="grid-layout" id="Divf9nZ" data-clientid="Divf9nZ" data-displayname="Flex - Horizontal">
+             <div id="Divwk85" data-clientid="Divwk85" data-displayname="Flex - Horizontal">
+                 <span id="Spanrh5g" data-clientid="Spanrh5g" data-displayname="Text" class="keyhighlights">
+                    
+                     <p class="keyhighlights-title">Dynamic Carousel Creation</p>
+               <p class="keyhighlights-content">Easily create and manage carousel banners based on predefined configurations.<br/>
                   Customize the number of carousel items and their order to suit your needs.</p>
-            </span>
-         </div>
-         <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding   " id="Divwk85" data-clientid="Divwk85" data-displayname="Flex - Horizontal" style="display: flex; z-index: 1; height: auto; width: 100%; margin: 0px; max-width: 380px; position: relative;">
-            <span id="Spanrh5g" data-clientid="Spanrh5g" data-displayname="Text" class="react-grid-item ltr  false   keyhighlights" style="display: block; z-index: 1; width: auto; height: fit-content; min-height: 30px; min-width: 16px; position: relative; margin: 0px;">
-               <p style="text-align: center;
-                  font-weight: bold;
-                  font-size: 125%;">Flexible Content Management</p>
-               <p>Activate or deactivate carousel items as required.
+                 </span>
+             </div>
+             <div id="Divwk85" data-clientid="Divwk85" data-displayname="Flex - Horizontal">
+                 <span id="Spanrh5g" data-clientid="Spanrh5g" data-displayname="Text" class="keyhighlights">
+                  <p class="keyhighlights-title">Flexible Content Management</p>
+               <p class="keyhighlights-content">Activate or deactivate carousel items as required.
                   Add titles, descriptions, and embed YouTube videos directly into the carousel items.
                   Define the content body as HTML to create richer and more engaging carousel items.</p>
-            </span>
-         </div>
-         <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding   " id="Divwk85" data-clientid="Divwk85" data-displayname="Flex - Horizontal" style="display: flex; z-index: 1; height: auto; width: 100%; margin: 0px; max-width: 380px; position: relative;">
-            <span id="Spanrh5g" data-clientid="Spanrh5g" data-displayname="Text" class="react-grid-item ltr  false   keyhighlights" style="display: block; z-index: 1; width: auto; height: fit-content; min-height: 30px; min-width: 16px; position: relative; margin: 0px;">
-               <p style="text-align: center;
-                  font-weight: bold;
-                  font-size: 125%;">User-Friendly Interface</p>
-               <p>Simple and intuitive interface for configuring and managing carousel items.
+                 </span>
+             </div>
+             <div id="Divwk85" data-clientid="Divwk85" data-displayname="Flex - Horizontal">
+                 <span id="Spanrh5g" data-clientid="Spanrh5g" data-displayname="Text" class="keyhighlights">
+                  <p class="keyhighlights-title">User-Friendly Interface</p>
+               <p class="keyhighlights-content">Simple and intuitive interface for configuring and managing carousel items.
                   Ensure that users receive the most relevant information in an easily accessible format.</p>
-            </span>
-         </div>
-         <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding   " id="Divwk85" data-clientid="Divwk85" data-displayname="Flex - Horizontal" style="display: flex; z-index: 1; height: auto; width: 100%; margin: 0px; max-width: 380px; position: relative;">
-            <span id="Spanrh5g" data-clientid="Spanrh5g" data-displayname="Text" class="react-grid-item ltr  false   keyhighlights" style="display: block; z-index: 1; width: auto; height: fit-content; min-height: 30px; min-width: 16px; position: relative; margin: 0px;">
-               <p style="text-align: center;
-                  font-weight: bold;
-                  font-size: 125%;">Seamless Integration</p>
-               <p>Integrates seamlessly with any Salesforce cloud, leveraging existing data and workflows.
+                 </span>
+             </div>
+             <div id="Divwk85" data-clientid="Divwk85" data-displayname="Flex - Horizontal">
+                 <span id="Spanrh5g" data-clientid="Spanrh5g" data-displayname="Text" class="keyhighlights">
+                  <p class="keyhighlights-title">Seamless Integration</p>
+               <p class="keyhighlights-content">Integrates seamlessly with any Salesforce cloud, leveraging existing data and workflows.
                   Minimal setup required, allowing for quick deployment and immediate benefits.</p>
-            </span>
+                 </span>
+             </div>
+
+             <div id="Divwk85" data-clientid="Divwk85" data-displayname="Flex - Horizontal">
+               <span id="Spanrh5g" data-clientid="Spanrh5g" data-displayname="Text" class="keyhighlights">
+                  <p class="keyhighlights-title">Advanced Filtering Options</p>
+               <p class="keyhighlights-content">Filter carousel items based on the App Name Filter, ensuring users see only the most relevant information for their specific applications.</p>
+               </span>
+           </div>
          </div>
-         <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding   " id="Divwk85" data-clientid="Divwk85" data-displayname="Flex - Horizontal" style="display: flex; z-index: 1; height: auto; width: 100%; margin: 0px; max-width: 380px; position: relative;">
-            <span id="Spanrh5g" data-clientid="Spanrh5g" data-displayname="Text" class="react-grid-item ltr  false   keyhighlights" style="display: block; z-index: 1; width: auto; height: fit-content; min-height: 30px; min-width: 16px; position: relative; margin: 0px;">
-               <p style="text-align: center;
-                  font-weight: bold;
-                  font-size: 125%;">Advanced Filtering Options</p>
-               <p>Filter carousel items based on the App Name Filter, ensuring users see only the most relevant information for their specific applications.</p>
-            </span>
-         </div>
-      </div>
+
+
       <br/>
       <br/>
       <span id="SpaneuAl" data-clientid="SpaneuAl" data-displayname="Text" class="react-grid-item ltr  false   " style="display: block;z-index: 1;width: fit-content;height: fit-content;min-height: 10px;min-width: 16px;position: relative;margin: 0 auto;">
          <p>Watch Our Demos</p>
       </span>
-      <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding   " id="Divf9nZ" data-clientid="Divf9nZ" data-displayname="Flex - Horizontal" style="display: flex; z-index: 1; height: auto; width: 100%; margin: 0px; max-width: 1200px; position: relative;">
-         <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding   " id="Divwk85" data-clientid="Divwk85" data-displayname="Flex - Horizontal" style="display: flex; z-index: 1; height: auto; width: 100%; margin: 0px; max-width: 516px; position: relative;">
-            <span id="Spanrh5g" data-clientid="Spanrh5g" data-displayname="Text" class="react-grid-item ltr  false   " style="display: block; z-index: 1; width: auto; height: fit-content; min-height: 30px; min-width: 16px; position: relative; margin: 0px;">
-               <p style="text-align: center;
-                  font-weight: bold;
-                  font-size: 125%;margin-bottom:0px;">
-                  <iframe width="100%" height="315" src="https://www.youtube.com/embed/sAGe8s9gvS8"> </iframe>
-               </p>
-            </span>
+     
+      <div style="display: flex; justify-content: center; flex-wrap: wrap; max-width: 1200px; margin: auto;">
+         <div style="flex: 1 1 45%; max-width: 516px; margin: 10px;">
+             <iframe width="100%" height="315" src="https://www.youtube.com/embed/sAGe8s9gvS8" frameborder="0" allowfullscreen></iframe>
          </div>
-         
-      </div>
+     </div>
       <br/>
       <br/>
       <style>

@@ -5,74 +5,106 @@ layout: default
 <div data-type="grid-layout" class="react-grid-item ltr  undefined  cd-padding   " data-clientid="DivqGBp" data-displayname="About wrap" style="display: flex; margin: 0px auto; height: auto; width: 100%; max-width: 1980px; position: relative;">
 
     <style>
-      .column {
-         float: left;
-         width: 33.3%;
-         margin-bottom: 16px;
-         padding: 0 20px;
-         font-family: 'Raleway';
-    font-size: inherit;
-       }
-       
-       @media screen and (max-width: 650px) {
-         .column {
-           width: 100%;
-           display: block;
-         }
-       }
-       
-       .card {
-         background-color: #FFCE31;
-         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-         border-style: solid;
-         border-width: 1px;
-         border-collapse: collapse;
-         border-color: #FFCE31;
-       }
-       
-       .container {
-         padding: 0 16px;
-       }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-       .container h2{
-         font-size: 20px;
-         text-align: center;
-    font-weight: bold;
-       }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
-       .container p{
-         font-size: 14px;
-         
-       }
-       
-       .container::after, .row::after {
-         content: "";
-         clear: both;
-         display: table;
-       }
-       
-       .title {
-         color: grey;
-         font-size: 24px;
-         padding: 5px 0px;
-         text-align: center;
-       }
-       
-       .button {
-         border: none;
-         outline: 0;
-         display: inline-block;
-         padding: 8px;
-         color: white;
-         background-color: #000;
-         text-align: center;
-         cursor: pointer;
-         width: 100%;
-       }
-       
-       .button:hover {
-         background-color: #555;
-       }
+    .column {
+        flex: 1;
+        min-width: 300px;
+        margin-bottom: 16px;
+        padding: 0 20px;
+        box-sizing: border-box;
+        display: flex;
+    }
+
+    .card {
+        background-color: #FFCE31;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border: 1px solid #FFCE31;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.2s;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card .container {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+
+    .card h2 {
+        font-size: 24px;
+        text-align: center;
+        font-weight: bold;
+        margin: 0 0 10px 0;
+    }
+
+    .card .title {
+        color: grey;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .card p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .card a {
+        text-align: center;
+        display: block;
+        margin: 20px 0;
+        text-decoration: underline;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #000;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        transition: background-color 0.3s;
+    }
+
+    .button:hover {
+        background-color: #555;
+    }
+
+    @media screen and (max-width: 650px) {
+        .column {
+            width: 100%;
+            padding: 0;
+        }
+
+        .card {
+            margin: 0 0 16px 0;
+        }
+    }
     </style>
     
 
@@ -82,56 +114,43 @@ layout: default
 
 
        
-      <div class="container">
-
-
-
-
+    <div class="container">
+      <div class="row">
           <div class="column">
-            
-            <div class="card">
-              <div class="container">
-                <h2>Branding Sets</h2>
-                <p class="title">TAILOR YOUR INTERFACE TO MATCH YOUR BRAND</p>
-                <p>Features:<br/>
-                  - Change Background Color<br/>
-                  - Customize Button Color<br/>
-                  - Easy Configuration<br/>
-                  - Changes Persist Across Sessions</p>
-                <br/>
-                <p style="text-align: center;"><a href="brandingsets.html" target="_self" style="text-decoration: underline;cursor:pointer;">More Details</a></p>
-             </div>
-            </div>
-            
+              <div class="card">
+                  <div class="container">
+                      <h2>Branding Sets</h2>
+                      <p class="title">TAILOR YOUR INTERFACE TO MATCH YOUR BRAND</p>
+                      <p>Features:<br/>
+                          - Change Background Color<br/>
+                          - Customize Button Color<br/>
+                          - Easy Configuration<br/>
+                          - Changes Persist Across Sessions</p>
+                      <a href="brandingsets.html" target="_self">More Details</a>
+                  </div>
+              </div>
           </div>
-
-          
+  
           <div class="column">
-            
-            <div class="card">
-              <div class="container">
-                <h2>HOME CAROUSEL BANNER</h2>
-                <p class="title">Elevate Your Notifications, Empower Your Team!</p>
-                <p>Features:<br/>
-                  - Dynamic Notifications<br/>
-                  - Easy Configuration<br/>
-                  - Rich HTML Content<br/>
-                  - Seamless Integration<br/>
-                  - Advanced Filtering</p>
-                <br/>
-                <p style="text-align: center;"><a href="homecarouselbanner.html" target="_self" style="text-decoration: underline;cursor:pointer;">More Details</a></p>
-             </div>
-            </div>
-            
+              <div class="card">
+                  <div class="container">
+                      <h2>HOME CAROUSEL BANNER</h2>
+                      <p class="title">Elevate Your Notifications, Empower Your Team!</p>
+                      <p>Features:<br/>
+                          - Dynamic Notifications<br/>
+                          - Easy Configuration<br/>
+                          - Rich HTML Content<br/>
+                          - Seamless Integration<br/>
+                          - Advanced Filtering</p>
+                      <a href="homecarouselbanner.html" target="_self">More Details</a>
+                  </div>
+              </div>
           </div>
-
-
-       </div>
-   
-   
-       
-   
-    </div> 
+  
+          <!-- Add more product cards below by copying the div with class="column" -->
+  
+      </div>
+  </div>
 
    
 

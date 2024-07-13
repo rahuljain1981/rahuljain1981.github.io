@@ -6,9 +6,11 @@ layout: default
   <p style="text-align: center;padding:32px 16px 32px 16px;" data-clientid="SpanQrLG"><strong>{{site.support}}</strong></p>
 
 
+  <p style="text-align: center;">Have a question or need assistance? Please fill out the form below, and we'll get back to you shortly.</p>
   <style>
     .codeylabs-form {
         max-width: 500px;
+        min-width: 50%;
         margin: 0 auto;
         padding: 20px;
         background-color: #FFCE31;
@@ -20,6 +22,7 @@ layout: default
     .codeylabs-form label {
         font-weight: bold;
         margin-bottom: 8px;
+        display: block;
     }
 
     .codeylabs-form input[type=text],
@@ -48,13 +51,13 @@ layout: default
         <input type="hidden" name="00NGB00000Qq074" value="CodeyLabs Site"> 
 
 
-        <label for="name">Contact Name</label>
+        <label for="name">What is your name?</label>
         <input id="name" maxlength="80" name="name" size="20" type="text" required><br>
 
-        <label for="email">Email</label>
+        <label for="email">What is your email address?</label>
         <input id="email" maxlength="80" name="email" size="20" type="email" required><br>
 
-        <label for="product">CodeyLabs Product</label>
+        <label for="product">Which CodeyLabs product are you inquiring about?</label>
         <select id="00NGB00000Qq06u" name="00NGB00000Qq06u" required>
             <option value="">--None--</option>
             <option value="Branding Sets">Branding Sets</option>
@@ -65,10 +68,10 @@ layout: default
             <option value="Other">Other</option>
         </select><br>
 
-        <label for="issue">What kind of issue</label>
+        <label for="issue">What kind of issue are you experiencing?</label>
         <input id="issue" maxlength="80" name="subject" size="20" type="text" required><br>
 
-        <label for="issuedescription">Issue Description</label>
+        <label for="issuedescription">Please describe the issue in detail.</label>
         <textarea id="issuedescription" name="description" required></textarea><br>
 
         <input data-clientid="Button8Ql6" type="submit" name="submit" value="Submit">

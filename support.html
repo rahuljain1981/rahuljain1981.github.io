@@ -6,26 +6,85 @@ layout: default
   <p style="text-align: center;padding:32px 16px 32px 16px;" data-clientid="SpanQrLG"><strong>{{site.support}}</strong></p>
 
 
-    <div style="margin-top: 0px;margin-left: 0px;height: auto;width: 100%;max-width: 1200px;margin-bottom: 0px;position: relative;line-height: 1.75em;">
-      
-        <div class="Wrapper">
-            
-                        <h2 class="Standard__title">Customer Support</h2>
-                    
-            <div class="Standard__body">
-                <p>
-                    <strong>We're here to help.</strong><br>
-    <!-- Start of Meetings Embed Script -->
-    <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/codeylabs?embed=true"></div>
-    <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
-  <!-- End of Meetings Embed Script -->
+  <style>
+    .codeylabs-form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        font-family: Arial, sans-serif;
+    }
 
-</p>
-    
-            </div>
-            
-                </div>
-    </div>
+    .codeylabs-form label {
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .codeylabs-form input[type=text],
+    .codeylabs-form textarea,
+    .codeylabs-form select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    .codeylabs-form textarea {
+        height: 100px;
+    }
+
+    .codeylabs-form input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .codeylabs-form input[type=submit]:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<div class="codeylabs-form">
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DGB000001tLU3" method="POST">
+        <input type="hidden" name="orgid" value="00DGB000001tLU3">
+        <input type="hidden" name="retURL" value="https://www.codeylabs.com/thankyou.html">
+
+        <label for="name">Contact Name</label>
+        <input id="name" maxlength="80" name="name" size="20" type="text" required><br>
+
+        <label for="email">Email</label>
+        <input id="email" maxlength="80" name="email" size="20" type="email" required><br>
+
+        <label for="product">CodeyLabs Product</label>
+        <select id="00NGB00000Qq06u" name="00NGB00000Qq06u" required>
+            <option value="">--None--</option>
+            <option value="Branding Sets">Branding Sets</option>
+            <option value="Custom Lightning Report Chart">Custom Lightning Report Chart</option>
+            <option value="Dynamic Rich Text">Dynamic Rich Text</option>
+            <option value="Home Carousel Banner">Home Carousel Banner</option>
+            <option value="Simple User Journey Builder">Simple User Journey Builder</option>
+            <option value="Other">Other</option>
+        </select><br>
+
+        <label for="issue">What kind of issue</label>
+        <input id="issue" maxlength="80" name="subject" size="20" type="text" required><br>
+
+        <label for="issuedescription">Issue Description</label>
+        <textarea id="issuedescription" name="description" required></textarea><br>
+
+        <input type="submit" name="submit" value="Submit">
+    </form>
+</div>
+
     
     
 </div>

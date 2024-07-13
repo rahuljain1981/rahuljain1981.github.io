@@ -90,8 +90,48 @@ layout: default
       </span>
       <div class="table">
          <div class="table-row">
-            <div data-clientid="DivjMGy" style="display: flex; margin: 0 auto; height: auto; width: 100%; max-width: 575px; position: relative;" class="col1">
-               <span id="Spant8Mg" data-clientid="Spant8Mg" data-displayname="Text" class="react-grid-item ltr  false   " style="display: block; z-index: 1; width: fit-content; height: fit-content; margin: 0px; min-height: 10px; min-width: 16px; position: relative; max-width: 450px;padding:5px;">
+            <style>
+               .col1[data-clientId="DivjMGy"] {
+                   padding: 20px 50px 20px 50px;
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: space-between;
+                   align-items: center;
+                   background-color: #FFF0BF;
+                   border-radius: 40px;
+                   margin: 0 auto;
+                   max-width: 575px;
+               }
+               
+               .col1 [data-clientId="Spant8Mg"] {
+                   font-family: Raleway, sans-serif;
+                   font-size: 16px;
+                   font-weight: 400;
+                   color: #000;
+                   line-height: 26px;
+                   text-align: center;
+                   margin-bottom: 20px;
+                   padding: 5px;
+               }
+               
+               .col1 {
+                   display: flex;
+                   justify-content: center;
+                   width: 100%;
+               }
+               
+               .col1 p {
+                   margin: 0;
+               }
+               
+               @media (max-width: 600px) {
+                   .col1[data-clientId="DivjMGy"] {
+                       padding: 20px;
+                   }
+               }
+               </style>
+            <divdata-clientid="DivjMGy" class="col1">
+               <span id="Spant8Mg" data-clientid="Spant8Mg" data-displayname="Text" class="react-grid-item">
                   <p>
                      A versatile managed package designed to enhance the user experience by providing dynamic carousel banners for notifications across any Salesforce cloud.  <br/><br/> Through simple configuration and metadata settings, you can control the content, order, and visibility of each carousel item, ensuring that users receive the information they need.
                      <!--br/>

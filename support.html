@@ -11,7 +11,7 @@ layout: default
         max-width: 500px;
         margin: 0 auto;
         padding: 20px;
-        background-color: #f0f0f0;
+        background-color: #FFCE31;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
         font-family: Arial, sans-serif;
@@ -23,6 +23,7 @@ layout: default
     }
 
     .codeylabs-form input[type=text],
+    .codeylabs-form input[type=email],
     .codeylabs-form textarea,
     .codeylabs-form select {
         width: 100%;
@@ -38,19 +39,6 @@ layout: default
         height: 100px;
     }
 
-    .codeylabs-form input[type=submit] {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-
-    .codeylabs-form input[type=submit]:hover {
-        background-color: #45a049;
-    }
 </style>
 
 <div class="codeylabs-form">
@@ -83,7 +71,7 @@ layout: default
         <label for="issuedescription">Issue Description</label>
         <textarea id="issuedescription" name="description" required></textarea><br>
 
-        <input type="submit" name="submit" value="Submit">
+        <input data-clientid="Button8Ql6" type="submit" name="submit" value="Submit">
     </form>
 </div> 
 

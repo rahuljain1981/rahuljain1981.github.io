@@ -362,6 +362,78 @@ layout: default
          <li>Step 9: Make the changes and self test drive</li>
         </ul>
       </div>
+
+
+      <style>
+
+         .doccontainer {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        
+        .doccontainer h1 {
+            text-align: center;
+            color: #000000;
+        }
+        
+        .doccontainer .product-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .doccontainer .product-item {
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        
+        .doccontainer .product-item:hover {
+            background-color: #FFCE31;
+        }
+        
+        .doccontainer .product-item a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+        
+        .doccontainer .product-item span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 600px) {
+            .doccontainer {
+                width: 95%;
+            }
+        
+            .doccontainer .product-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+      </style>
+      <div class="doccontainer">
+         <h1>Product Documents</h1>
+         <ul class="product-list">
+             <li class="product-item">
+                 <a href="/assets/docs/JMB/jmbguide.pdf" target="_blank">
+                     <span>Product Guide and Setup Manual</span>
+                 </a>
+             </li>
+             
+             <!-- Add more product items as needed -->
+         </ul>
+     </div>
+
+
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

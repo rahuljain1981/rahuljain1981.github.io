@@ -490,7 +490,7 @@ layout: default
      <style>
 
       .faq-section {
-         max-width: 800px;
+         width: 80%;
          margin: 40px auto;
          padding: 20px;
          background-color: #ffffff;
@@ -556,6 +556,11 @@ layout: default
          margin-bottom: 10px;
      }
 
+     @media (max-width: 600px) {
+      .faq-section {
+          width: 95%;
+      }
+   }
      </style>
      <div class="faq-section">
             <h1>Frequently Asked Questions (FAQs)</h1>
@@ -630,7 +635,7 @@ layout: default
             <div class="faq-item">
                <button class="faq-question">10. What should I do if my customizations don’t appear as expected?</button>
                <div class="faq-answer">
-                  <p>If customizations do not appear as expected, verify that the component is correctly placed on the record page in the App Builder. Ensure that all color settings are specified using the correct formats (HEX, RGB, RGBA) and that there are no conflicts with other components or settings on the page. If issues persist, consult Salesforce support or review documentation for troubleshooting tips.</p>
+                  <p>If customizations do not appear as expected, verify that the component is correctly placed on the record page in the App Builder. Ensure that all color settings are specified using the correct formats (HEX, RGB, RGBA) and that there are no conflicts with other components or settings on the page. If issues persist, consult CodeyLabs support or review documentation for troubleshooting tips.</p>
                </div>
             </div>
       </div>

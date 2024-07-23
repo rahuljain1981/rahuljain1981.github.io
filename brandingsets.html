@@ -485,6 +485,165 @@ layout: default
              <!-- Add more product items as needed -->
          </ul>
      </div>
+
+
+     <style>
+
+      .faq-section {
+         max-width: 800px;
+         margin: 40px auto;
+         padding: 20px;
+         background-color: #ffffff;
+         border-radius: 8px;
+         box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+     }
+     
+     .faq-section h1 {
+         text-align: center;
+         color: #333;
+         margin-bottom: 30px;
+     }
+     
+     .faq-section .faq-item {
+         margin-bottom: 15px;
+     }
+     
+     .faq-section .faq-question {
+         width: 100%;
+         text-align: left;
+         background-color: #007bff;
+         color: #ffffff;
+         padding: 15px;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+         font-size: 16px;
+     }
+     
+     .faq-section .faq-question:hover {
+         background-color: #0056b3;
+     }
+     
+     .faq-section .faq-question:focus {
+         outline: none;
+     }
+     
+     .faq-section .faq-question.active {
+         background-color: #0056b3;
+     }
+     
+     .faq-section .faq-answer {
+         display: none;
+         background-color: #f1f1f1;
+         border-left: 3px solid #007bff;
+         padding: 15px;
+         border-radius: 5px;
+         margin-top: 5px;
+     }
+     
+     .faq-section .faq-answer p {
+         margin: 0;
+     }
+     
+     .faq-section .faq-answer ul {
+         padding-left: 20px;
+     }
+     
+     .faq-section .faq-answer li {
+         margin-bottom: 10px;
+     }
+
+     </style>
+     <div class="faq-section">
+            <h1>Frequently Asked Questions (FAQs)</h1>
+            
+            <div class="faq-item">
+               <button class="faq-question">1. What is the purpose of the Branding Sets component?</button>
+               <div class="faq-answer">
+                  <p>The Branding Sets component is designed to customize the appearance of Salesforce record pages to align with your organization's branding. It allows you to change color schemes for backgrounds and buttons, ensuring a consistent and professional look across your Salesforce environment.</p>
+               </div>
+            </div>
+
+            <div class="faq-item">
+               <button class="faq-question">2. How can I customize the colors on my Salesforce record pages using Branding Sets?</button>
+               <div class="faq-answer">
+                  <p>You can customize colors by using the Branding Sets component in the App Builder. You have options to set colors for page headers, neutral buttons, and the overall page background. Simply drag and drop the component onto the record page and adjust the color settings to match your brand’s requirements.</p>
+               </div>
+            </div>
+
+            <div class="faq-item">
+               <button class="faq-question">3. Can Branding Sets be used to highlight specific fields on record pages?</button>
+               <div class="faq-answer">
+                  <p>While the Branding Sets component primarily focuses on customizing page and button colors, it can be used alongside the Field Highlighter component to bring attention to important fields. The Field Highlighter allows you to specify field background and font colors for greater visibility and emphasis.</p>
+               </div>
+            </div>
+
+            <div class="faq-item">
+               <button class="faq-question">4. What are some common use cases for the Branding Sets component?</button>
+               <div class="faq-answer">
+                  <ul>
+                        <li><strong>Corporate Branding:</strong> Aligning Salesforce record pages with your company’s color scheme to ensure a cohesive brand image.</li>
+                        <li><strong>Departmental Customization:</strong> Using different color schemes for various departments (e.g., Sales, Service) to help users quickly identify the context of a record page.</li>
+                        <li><strong>Event-Specific Branding:</strong> Temporarily changing colors for events or campaigns to promote awareness and engagement.</li>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="faq-item">
+               <button class="faq-question">5. How do persistent changes work in the Branding Sets component?</button>
+               <div class="faq-answer">
+                  <p>Once you configure the color settings in the Branding Sets component and save your changes, these customizations are persistent across sessions. This means that the color schemes you set will remain consistent every time you or other users access the record pages, providing a stable and predictable user experience.</p>
+               </div>
+            </div>
+
+            <div class="faq-item">
+               <button class="faq-question">6. Is it possible to revert to default Salesforce themes after applying customizations with Branding Sets?</button>
+               <div class="faq-answer">
+                  <p>Yes, you can revert to the default Salesforce themes at any time by removing the Branding Sets component from the record pages in the App Builder or by resetting the color values to their default settings.</p>
+               </div>
+            </div>
+
+            <div class="faq-item">
+               <button class="faq-question">7. How does the Branding Sets component ensure an admin-friendly experience?</button>
+               <div class="faq-answer">
+                  <p>The Branding Sets component offers an admin-friendly experience by providing an intuitive interface that requires minimal technical expertise. System administrators can easily access and configure color settings through the App Builder, making it simple to apply branding changes without extensive coding or design knowledge.</p>
+               </div>
+            </div>
+
+            <div class="faq-item">
+               <button class="faq-question">8. Can Branding Sets be used in conjunction with Salesforce Lightning Design System (SLDS)?</button>
+               <div class="faq-answer">
+                  <p>Yes, Branding Sets is compatible with the Salesforce Lightning Design System (SLDS). You can specify colors using standard formats like HEX, RGB, and RGBA, allowing you to maintain consistency with SLDS guidelines while customizing your record pages.</p>
+               </div>
+            </div>
+
+            <div class="faq-item">
+               <button class="faq-question">9. Does the Branding Sets component support mobile views?</button>
+               <div class="faq-answer">
+                  <p>Yes, the Branding Sets component is responsive and supports mobile views. Customizations made using Branding Sets will apply to both desktop and mobile versions of Salesforce, ensuring a consistent experience across all devices.</p>
+               </div>
+            </div>
+
+            <div class="faq-item">
+               <button class="faq-question">10. What should I do if my customizations don’t appear as expected?</button>
+               <div class="faq-answer">
+                  <p>If customizations do not appear as expected, verify that the component is correctly placed on the record page in the App Builder. Ensure that all color settings are specified using the correct formats (HEX, RGB, RGBA) and that there are no conflicts with other components or settings on the page. If issues persist, consult Salesforce support or review documentation for troubleshooting tips.</p>
+               </div>
+            </div>
+      </div>
+
+      <script>
+            document.querySelectorAll('.faq-question').forEach(button => {
+               button.addEventListener('click', () => {
+                  const answer = button.nextElementSibling;
+                  answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                  button.classList.toggle('active');
+               });
+            });
+      </script>
+
+
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

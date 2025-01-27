@@ -90,29 +90,11 @@
                                 {% if page.url == "/" %}
 
                                 <div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="DivzgpE" data-clientid="DivzgpE" data-displayname="container" style="padding: 40px 0; display: flex; justify-content: center; align-items: center; width: 100%; height: auto; max-width: 1200px; margin: 0 auto; position: relative;">
-                                  <video id="homepageVideo" autoplay muted playsinline style="width: 100%; max-width: 800px; border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);">
+                                  <video id="homepageVideo" autoplay muted playsinline controls  style="width: 100%; max-width: 800px; border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);">
                                       <source src="/assets/video/promo.mp4" type="video/mp4">
                                       Your browser does not support the video tag.
                                   </video>
-                              
-                                  <!-- Unmute Button -->
-                                  <button id="unmuteButton" style="position: absolute; top: 20px; right: 20px; padding: 10px 20px; background-color: #0D9DDA; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                                      Unmute
-                                  </button>
                               </div>
-                              
-                              <script>
-                                  document.getElementById('unmuteButton').addEventListener('click', function() {
-                                      var video = document.getElementById('homepageVideo');
-                                      if (video.muted) {
-                                          video.muted = false;  // Unmute the video
-                                          this.textContent = "Mute";  // Change button text to "Mute"
-                                      } else {
-                                          video.muted = true;  // Mute the video
-                                          this.textContent = "Unmute";  // Change button text to "Unmute"
-                                      }
-                                  });
-                              </script>
                                 <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding   " id="DivzHr7" data-clientid="DivzHr7" data-displayname="Hero Section" style="display: flex; margin-top: 0px; margin-left: 0px; height: auto; width: 100%; max-width: 1200px; margin-bottom: 0px; position: relative;">
                                   <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding   " id="DivhSia" data-clientid="DivhSia" data-displayname="Hero Section Left Block" style="display: flex; margin-top: 0px; margin-left: 0px; height: auto; width: 100%; max-width: 575px; margin-bottom: 0px; position: relative;">
                                       <span id="Span8Pmt" data-clientid="Span8Pmt" data-displayname="Heading" class="react-grid-item ltr  false   " style="display: block; width: fit-content; height: fit-content; margin: 0px; min-height: 10px; min-width: 16px; position: relative;">

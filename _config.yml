@@ -1,6 +1,4 @@
-title: Codeylabs, a Salesforce Solutions Hub
 logo: /assets/img/logo.png
-description: A Salesforce Solutions Hub.
 show_downloads: true
 google_analytics: G-YMWLVSY8JW
 careers: Careers
@@ -20,3 +18,7 @@ F360PackageId: 04tJ4000000gOJ0IAM
 BYOBLatestVersion: v1.16.0
 BYOBPackageId: 04ta5000000wRxVAAU
 testdrivequotex: Test Drive Quote Experience
+pagename: index.html
+description: A Salesforce Solutions Hub.
+title: Codeylabs, a Salesforce Solutions Hub
+

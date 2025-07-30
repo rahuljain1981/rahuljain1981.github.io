@@ -21,4 +21,10 @@ testdrivequotex: Test Drive Quote Experience
 pagename: index.html
 description: CodeyLabs delivers powerful Salesforce solutions and accelerators that go beyond convention. From ready-to-use managed packages to expert consulting, we help you transform your business on Force.com with innovation, speed, and impact.
 title: Codeylabs, a Salesforce Solutions Hub
+ogtitle: CodeyLabs - Salesforce Solutions Hub
+ogdescription: CodeyLabs delivers powerful Salesforce solutions and accelerators that go beyond convention. From ready-to-use managed packages to expert consulting, we help you transform your business on Force.com with innovation, speed, and impact.
+ogimage: /assets/img/logo.png
+ogurl: https://www.codeylabs.com/index.html
+
+
 

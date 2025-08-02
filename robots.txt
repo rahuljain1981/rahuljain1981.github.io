@@ -1,0 +1,11 @@
+# This robots.txt file is for www.codeylabs.com
+# It instructs web crawlers on how to crawl the site.
+
+# Allow all user agents (web crawlers) to access all pages.
+# This is a good default setting for most websites.
+User-agent: *
+Allow: /
+
+# Add the URL to your sitemap here.
+# This helps search engines discover all the pages on your site.
+Sitemap: https://www.codeylabs.com/sitemap.xml

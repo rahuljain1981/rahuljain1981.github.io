@@ -51,6 +51,11 @@
   
 }
 
+.codeylabsofferingimage{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 
 /* ==========================================================================
    HEADER STYLES
@@ -2578,7 +2583,6 @@ p {
   display: block;
   position: relative;
   height: 620px;
-  width: fit-content;
   max-width: 475px;
   min-height: 500px;
   margin: -20px 0 0;

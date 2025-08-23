@@ -2,7 +2,6 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <title>{{ page.title | default: site.title }}</title>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMWLVSY8JW"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -27,158 +26,103 @@
     <meta name="keywords" content="{{ page.keywords | default: site.keywords }}" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
     {% include head-custom.html %}
   </head>
   <body>   
       <section id="heroSection" class="rgl-container page-preview" style="position: relative;">
-                      <header>
-                              <div data-type="grid-layout" class="react-grid-item ltr  undefined  cd-padding   " id="DivnQf4" data-clientid="DivnQf4" data-displayname="Hero Section with Header" style="display: flex; margin: 0px auto; height: auto; width: 100%; max-width: 1980px; position: relative;">
-                                <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding   " id="DivsXAd" data-clientid="DivsXAd" data-displayname="Header " style="display: flex; margin-top: 0px; margin-left: 0px; height: auto; width: 100%; max-width: 1200px; margin-bottom: 0px; position: relative;">
-                                  <!--a href="https://www.codeylabs.com/" target="_self"-->
-                                  <span id="Span2zlj" data-clientid="Span2zlj" data-displayname="Brand" class="react-grid-item ltr  false   " style="display: block; width: fit-content; height: fit-content; margin: 0px; min-height: 224px; min-width: 300px; position: relative;">
-                                    <a target="_self" href="index.html"><img class="" style="height: 100%; width:100%;" data-clientid="logo" id="logo" src="/assets/img/codeylabs_logo.svg"/></a>
-                                    
-                                      
-                                  </span>
-                                  <!--/a-->
-                                  <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding  " id="DivHTiO" data-clientid="DivHTiO" data-displayname="Header Links Block" style="display: flex; margin-top: 0px; margin-left: 0px; height: auto; width: fit-content; margin-bottom: 0px; position: relative;">
-                                      <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding   " id="DivMA6W" data-clientid="DivMA6W" data-displayname="Header Links" style="display: flex; z-index: 1500; margin-top: 0px; margin-left: 0px; height: auto; width: fit-content; margin-bottom: 0px; position: relative;">
-                                        <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding   " id="DivTUMI" data-clientid="DivTUMI" data-displayname="close button" style="display: none; margin-right: 0px; margin-bottom: 0px; position: relative;">
-                                            <span onclick="document.getElementById('DivHTiO').classList.remove('on');" id="close_FILL0_wght400_GRAD0_opsz48GUOd" data-displayname="image" class="react-grid-item ltr  false   " style="display: block; width: 30px; height: 30px; position: relative; max-width: 600px; max-height: 600px; margin-right: 0px; margin-bottom: 0px;">
-                                              <img class="" data-clientid="close_FILL0_wght400_GRAD0_opsz48GUOd" id="close_FILL0_wght400_GRAD0_opsz48GUOd-id" src="/assets/img/close_fill0_wght400_grad0_opsz48svg_1699334576_27033.svg" alt="sl" compprops="[object Object]" type="page" clientid="close_FILL0_wght400_GRAD0_opsz48GUOd" cssobj="[object Object]" cssstring="[object Object]" parent_id="DivTUMI" name="close_FILL0_wght400_GRAD0_opsz48" componentstyle="[object Object]">
-                                              
-                                            </span>
-                                            
-                                        </div>
-                                        <span id="SpanpQZB" data-clientid="SpanpQZB" data-displayname="Header Link 1" class="react-grid-item ltr  false   " style="display: block; z-index: 1; width: fit-content; height: fit-content; min-height: 10px; min-width: 16px; position: relative; margin-right: 0px; margin-bottom: 0px;">
-                                            <a rel="noreferrer" href="index.html" class="anchor-tag-reset cd-padding" target="_parent" style="text-decoration: none;">
-                                              <p>Home </p>
-                                              
-                                            </a>
-                                        </span>
-                                        <span id="SpanpQZB" data-clientid="SpanpQZB" data-displayname="Header Link 1" class="react-grid-item ltr  false   " style="display: block; z-index: 1; width: fit-content; height: fit-content; min-height: 10px; min-width: 16px; position: relative; margin-right: 0px; margin-bottom: 0px;">
-                                          <a rel="noreferrer" href="ourproducts.html" class="anchor-tag-reset cd-padding" target="_parent" style="text-decoration: none;">
-                                            <p>{{ site.ourproducts }}</p>
-                                            
-                                          </a>
-                                        </span>
-                                        
-                                        <span id="SpanNUvF" data-clientid="SpanNUvF" data-displayname="Header Link 2" class="react-grid-item ltr  false   " style="display: block; z-index: 1; width: fit-content; height: fit-content; min-height: 10px; min-width: 16px; position: relative; margin-right: 0px; margin-bottom: 0px;">
-                                            <a rel="noreferrer" href="blogs.html" class="anchor-tag-reset cd-padding" target="_parent" style="text-decoration: none;">
-                                              <p>Our Blogs</p>
-                                              
-                                            </a>
-                                        </span>
+          <header>
+              <div data-type="grid-layout" class="react-grid-item ltr undefined cd-padding" id="DivnQf4" data-clientid="DivnQf4" data-displayname="Hero Section with Header">
+                <div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="DivsXAd" data-clientid="DivsXAd" data-displayname="Header ">
+                  <span id="Span2zlj" data-clientid="Span2zlj" data-displayname="Brand" class="react-grid-item ltr false">
+                    <a target="_self" href="index.html"><img class="" data-clientid="logo" id="logo" src="/assets/img/codeylabs_logo.svg"/></a>
+                  </span>
+                  <div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="DivHTiO" data-clientid="DivHTiO" data-displayname="Header Links Block">
+                      <div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="DivMA6W" data-clientid="DivMA6W" data-displayname="Header Links">
+                        <div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="DivTUMI" data-clientid="DivTUMI" data-displayname="close button">
+                            <span onclick="document.getElementById('DivHTiO').classList.remove('on');" id="close_FILL0_wght400_GRAD0_opsz48GUOd" data-displayname="image" class="react-grid-item ltr false">
+                              <img class="" data-clientid="close_FILL0_wght400_GRAD0_opsz48GUOd" id="close_FILL0_wght400_GRAD0_opsz48GUOd-id" src="/assets/img/close_fill0_wght400_grad0_opsz48svg_1699334576_27033.svg" alt="sl">
+                            </span>
+                        </div>
+                        <span id="SpanpQZB" data-clientid="SpanpQZB" data-displayname="Header Link 1" class="react-grid-item ltr false">
+                            <a rel="noreferrer" href="index.html" class="anchor-tag-reset cd-padding" target="_parent">
+                              <p>Home</p>
+                            </a>
+                        </span>
+                        <span id="SpanpQZB" data-clientid="SpanpQZB" data-displayname="Header Link 1" class="react-grid-item ltr false">
+                          <a rel="noreferrer" href="ourproducts.html" class="anchor-tag-reset cd-padding" target="_parent">
+                            <p>{{ site.ourproducts }}</p>
+                          </a>
+                        </span>
+                        <span id="SpanNUvF" data-clientid="SpanNUvF" data-displayname="Header Link 2" class="react-grid-item ltr false">
+                            <a rel="noreferrer" href="blogs.html" class="anchor-tag-reset cd-padding" target="_parent">
+                              <p>Our Blogs</p>
+                            </a>
+                        </span>
+                        <span id="SpandwWw" data-clientid="SpandwWw" data-displayname="Header Link 4" class="react-grid-item ltr false">
+                            <a rel="noreferrer" href="https://codeylabs.my.site.com/demohub/s/" class="anchor-tag-reset cd-padding" target="_blank">
+                              <p>Demo Hub</p>
+                            </a>
+                        </span>
+                        <span id="SpanZKHO" data-clientid="SpanZKHO" data-displayname="Header Link 3" class="react-grid-item ltr false">
+                            <a rel="noreferrer" href="aboutus.html" class="anchor-tag-reset cd-padding" target="_parent">
+                              <p>About Us</p>
+                            </a>
+                        </span>
+                      </div>
+                  </div>
+                  <button id="ButtonGFFs" data-clientid="ButtonGFFs" data-displayname="Header CTA Button" class="react-grid-item ltr false">
+                      <a rel="noreferrer" href="index.html#contact" class="anchor-tag-reset cd-padding" target="_parent">
+                        <p>Get in Touch</p>
+                      </a>
+                  </button>
+                  <button id="DivTano" onclick="document.getElementById('DivHTiO').classList.add('on');" data-clientid="DivTano" data-displayname="Header Menu Icon" class="react-grid-item ltr false">
+                  </button>
+                </div>
+                {% if page.url == "/" %}
+                <div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="DivzHr7" data-clientid="DivzHr7" data-displayname="Hero Section">
+                  <div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="DivhSia" data-clientid="DivhSia" data-displayname="Hero Section Left Block">
+                      <span id="Span8Pmt" data-clientid="Span8Pmt" data-displayname="Heading" class="react-grid-item ltr false">
+                        <p><span>Experience</span> the Codeylabs Advantage</p>
+                      </span>
+                      <span id="SpanRYbJ" data-clientid="SpanRYbJ" data-displayname="Paragraph" class="react-grid-item ltr false">
+                        <p>We deliver cutting-edge Salesforce solutions to transform your business on <span>Salesforce's</span> Force.com platform, transcending conventional boundaries with transformative accelerators.</p>
+                      </span>
+                      <div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="Divu2Dn" data-clientid="Divu2Dn" data-displayname="Hero Section Input Block">
+                        <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00D80000000LJwx">
+                          <input type=hidden name="orgid" value="00D80000000LJwx">
+                          <input type=hidden name="retURL" value="https://www.codeylabs.com/thankyou.html">
+                          <span id="Input8BGu" data-displayname="Input" class="react-grid-item ltr false">
+                              <input id="email" maxlength="80" name="email" data-clientid="Input8BGu" type="email" placeholder="Enter your email" class="non-draggable" required value="">
+                          </span>
+                          <input type="hidden" id="external" name="external" value="1" />
+                          <input type="hidden" id="name" maxlength="80" name="name" />
+                          <textarea name="description" style="display:none;visibility:hidden;">Case Origin - From Enter Your Email and Learn More on Codeylabs site</textarea>
+                          <br/>
+                          <br/>
+                          <button type="submit" id="ButtonwpHh" data-clientid="ButtonwpHh" data-displayname="Button" class="react-grid-item ltr false">
+                              <p>Learn More</p>
+                          </button>
+                        </form>
+                      </div>
+                  </div>
+                  <div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="Div6qx1" data-clientid="Div6qx1" data-displayname="Hero Section Right">
+                      <span id="dugba-cauley-hushie-6MNmDi1hc_Y-unsplashMmlm" data-displayname="Hero Image" class="react-grid-item ltr false">
+                        <img class="" data-clientid="dugba-cauley-hushie-6MNmDi1hc_Y-unsplashMmlm" id="dugba-cauley-hushie-6MNmDi1hc_Y-unsplashMmlm-id" src="/assets/img/CodeyLabsOffering.png" alt="sl">
+                      </span>
+                  </div>
+                </div>
+                {% endif %}
+            </div>
+          </header>
 
-                                        <span id="SpandwWw" data-clientid="SpandwWw" data-displayname="Header Link 4" class="react-grid-item ltr  false   " style="display: block; z-index: 1; width: fit-content; height: fit-content; min-height: 10px; min-width: 16px; position: relative; margin-right: 0px; margin-bottom: 0px;">
-                                            <a rel="noreferrer" href="https://codeylabs.my.site.com/demohub/s/" class="anchor-tag-reset cd-padding" target="_blank" style="text-decoration: none;">
-                                              <p>Demo Hub</p>
-                                              
-                                            </a>
-                                        </span>
+          {{ content }}
 
-                                        <span id="SpanZKHO" data-clientid="SpanZKHO" data-displayname="Header Link 3" class="react-grid-item ltr  false   " style="display: block; z-index: 1; width: fit-content; height: fit-content; min-height: 10px; min-width: 16px; position: relative; margin-right: 0px; margin-bottom: 0px;">
-                                            <a rel="noreferrer" href="aboutus.html" class="anchor-tag-reset cd-padding" target="_parent" style="text-decoration: none;">
-                                              <p>About Us </p>
-                                              
-                                            </a>
-                                        </span>
-                                        
-                                        
-                                      </div>
-                                      
-                                  </div>
-                                  <button id="ButtonGFFs" data-clientid="ButtonGFFs" data-displayname="Header CTA Button" class="react-grid-item ltr  false   " style="display: block; margin: 0px; width: fit-content; height: fit-content; position: relative; min-height: 56px;">
-                                      <a rel="noreferrer" href="index.html#contact" class="anchor-tag-reset cd-padding" target="_parent" style="text-decoration: none;">
-                                        <p>Get in Touch </p>
-                                        
-                                      </a>
-                                  </button>
-                                  <button id="DivTano" onclick="document.getElementById('DivHTiO').classList.add('on');" data-clientid="DivTano" data-displayname="Header Menu Icon" class="react-grid-item ltr  false   " style="display: none; margin: 0px; height: 15px; width: 35px; position: relative;">
-                                      
-                                  </button>
-                                  
-                                </div>
-                                {% if page.url == "/" %}
-
-                                <!--div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="DivzgpE" data-clientid="DivzgpE" data-displayname="container" style="padding: 40px 0; display: flex; justify-content: center; align-items: center; width: 100%; height: auto; max-width: 1200px; margin: 0 auto; position: relative;">
-                                  <video id="homepageVideo" autoplay muted playsinline controls  style="width: 100%; max-width: 800px; border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);">
-                                      <source src="/assets/video/promo.mp4" type="video/mp4">
-                                      Your browser does not support the video tag.
-                                  </video>
-                              </div-->
-                                <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding   " id="DivzHr7" data-clientid="DivzHr7" data-displayname="Hero Section" style="padding: 40px 0; display: flex; margin-top: 0px; margin-left: 0px; height: auto; width: 100%; max-width: 1200px; margin-bottom: 0px; position: relative;">
-                                  <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding   " id="DivhSia" data-clientid="DivhSia" data-displayname="Hero Section Left Block" style="display: flex; margin-top: 0px; margin-left: 0px; height: auto; width: 100%; max-width: 575px; margin-bottom: 0px; position: relative;">
-                                      <span id="Span8Pmt" data-clientid="Span8Pmt" data-displayname="Heading" class="react-grid-item ltr  false   " style="display: block; width: fit-content; height: fit-content; margin: 0px; min-height: 10px; min-width: 16px; position: relative;">
-                                        <p><span style="color:#FFCE31">Experience</span> the Codeylabs Advantage </p>
-                                        
-                                      </span>
-                                      <span id="SpanRYbJ" data-clientid="SpanRYbJ" data-displayname="Paragraph" class="react-grid-item ltr  false   " style="display: block; z-index: 1; width: fit-content; height: fit-content; margin: 0px; min-height: 10px; min-width: 16px; position: relative;">
-                                        <p>We deliver cutting-edge Salesforce solutions to transform your business on <span style="color:#0D9DDA">Salesforce's</span> Force.com platform, transcending conventional boundaries with transformative accelerators. </p>
-                                        
-                                      </span>
-                                      <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding   " id="Divu2Dn" data-clientid="Divu2Dn" data-displayname="Hero Section Input Block" style="display: flex; margin-top: 0px; margin-left: 0px; height: auto; width: 100%; margin-bottom: 0px; position: relative;">
-
-                                        <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00D80000000LJwx">
-                                          <input type=hidden name="orgid" value="00D80000000LJwx">
-                                          <input type=hidden name="retURL" value="https://www.codeylabs.com/thankyou.html">
-
-
-
-                                        
-                                        <span id="Input8BGu" data-displayname="Input" class="react-grid-item ltr  false   " style="display: block; z-index: 1; margin: 0px; width: fit-content; height: auto; position: relative; min-height: 56px; min-width: 350px;">
-                                            <input id="email" maxlength="80" name="email" data-clientid="Input8BGu" type="email" placeholder="Enter your email" class="non-draggable " required="" value="" style="height: 100%; width: 100%; min-height: inherit; min-width: inherit; max-height: inherit; max-width: inherit;">
-                                            
-                                        </span>
-                                        <input type="hidden"  id="external" name="external" value="1" />
-
-                                        <input type="hidden" id="name" maxlength="80" name="name" />
-                                        <textarea name="description" style="display:none;visibility:hidden;">
-                      From Enter Your Email and Learn More
-                                        </textarea>
-                                        <br/>
-                                        <br/>
-                                        <button type="submit" id="ButtonwpHh" data-clientid="ButtonwpHh" data-displayname="Button" class="react-grid-item ltr  false   " style="display: block; z-index: 1; margin: 0px; width: fit-content; height: fit-content; position: relative; min-height: 56px;">
-                                            <p>Learn More </p>
-                                            
-                                        </button>
-                                      </form>
-                                      </div>
-                                      
-                                  </div>
-                                  <div data-type="grid-layout" class="react-grid-item ltr  false  cd-padding   " id="Div6qx1" data-clientid="Div6qx1" data-displayname="Hero Section Right" style="display: flex; margin-top: 0px; margin-left: 0px; height: 600px; width: 100%; max-width: 575px; margin-bottom: 0px; position: relative;">
-                                      <span id="dugba-cauley-hushie-6MNmDi1hc_Y-unsplashMmlm" data-displayname="Hero Image" class="react-grid-item ltr  false   " style="display: block; width: fit-content; height: 620px; margin: -20px 0px 0px; position: relative; max-width: 475px; min-height: 500px;">
-                                        <img class="" data-clientid="dugba-cauley-hushie-6MNmDi1hc_Y-unsplashMmlm" id="dugba-cauley-hushie-6MNmDi1hc_Y-unsplashMmlm-id" src="/assets/img/CodeyLabsOffering.png" alt="sl" compprops="[object Object]" type="page" clientid="dugba-cauley-hushie-6MNmDi1hc_Y-unsplashMmlm" cssobj="[object Object]" cssstring="[object Object]" parent_id="Div6qx1" name="dugba-cauley-hushie-6MNmDi1hc_Y-unsplash" componentstyle="[object Object]">
-                                        
-                                      </span>
-                                      
-                                  </div>
-                                  
-                                </div>
-                                
-                                  
-                                </div>
-                                {% endif %}
-                               
-                            </div>
-                      </header>
-                     
-
-                      {{ content }}
-
-                      
-                      <footer>
-                        {% include footer-custom.html %}
-                      </footer>
+          <footer>
+            {% include footer-custom.html %}
+          </footer>
     </section>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    <!-- Start of HubSpot Embed Code -->
-     <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/46583007.js"></script>
-    <!-- End of HubSpot Embed Code -->
-
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/46583007.js"></script>
     <script>
             document.querySelectorAll('.faq-question').forEach(button => {
                button.addEventListener('click', () => {
@@ -187,18 +131,9 @@
                   button.classList.toggle('active');
                });
             });
-      </script>
-
-
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-   
-   <style>
-     p {
-        margin-top: 0;
-        margin-bottom: 0rem;
-     }
-   </style>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>

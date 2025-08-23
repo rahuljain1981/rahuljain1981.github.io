@@ -2258,3 +2258,631 @@ html {
             width: 100%;
             height: 1100px;
         }
+
+
+/* ==========================================================================
+   REFACTORED FOOTER STYLES
+   ========================================================================== */
+
+/* General container styles for footer sections */
+[data-clientId="Div2Ekx"],
+[data-clientId="DivemZ2"] {
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  max-width: 1980px;
+}
+
+/* Inner containers with a max-width for content alignment */
+[data-clientId="DivJgPn"],
+[data-clientId="Div8oAt"],
+[data-clientId="DivnAw0"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0; /* Resets margin */
+}
+
+/* Styling for the main heading text */
+[data-clientId="Span71ui"] {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  max-width: 1000px;
+  margin: 0;
+  z-index: 1;
+}
+
+/* Overriding default button display and setting a minimum height */
+[data-clientId="Button8Ql6"] {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  min-height: 64px;
+  z-index: 1;
+}
+
+/* Footer column wrappers */
+[data-clientId="DivwUYl"],
+[data-clientId="Div958E"],
+[data-clientId="Divqoab"] {
+  display: flex;
+  position: relative;
+  height: auto;
+  margin: 0;
+}
+
+[data-clientId="DivwUYl"] {
+  width: 100%;
+  max-width: 400px;
+}
+
+[data-clientId="Div958E"],
+[data-clientId="Divqoab"] {
+  width: fit-content;
+  max-width: 200px;
+}
+
+/* Common styles for all text spans in the footer */
+[data-clientId="Spannqcz"],
+[data-clientId="SpanAkyg"],
+[data-clientId="SpandRUn"],
+[data-clientId="SpanwpZ9"],
+[data-clientId="SpaniYjd"],
+[data-clientId="SpanTuKA"],
+[data-clientId="SpanklGI"] {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  z-index: 1;
+}
+
+/* Specific max-width for certain text blocks */
+[data-clientId="SpanAkyg"],
+[data-clientId="SpandRUn"],
+[data-clientId="SpanwpZ9"],
+[data-clientId="SpaniYjd"],
+[data-clientId="SpanTuKA"] {
+  max-width: 275px;
+}
+
+/* Center-align the copyright text */
+[data-clientId="SpanklGI"] {
+  text-align: center;
+}
+
+/* Remove text decoration from links within specific footer elements */
+[data-clientId="Button8Ql6"] a,
+[data-clientId="SpandRUn"] a,
+[data-clientId="SpanwpZ9"] a,
+[data-clientId="SpaniYjd"] a,
+[data-clientId="SpanTuKA"] a,
+[data-clientId="SpanklGI"] a {
+  text-decoration: none;
+}
+
+/* Specifically underline the email link */
+[data-clientId="SpanklGI"] a[href^="mailto:"] {
+  text-decoration: underline;
+}
+
+/* Ensure paragraphs inside links and buttons have no extra margin */
+button p, button a {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ==========================================================================
+   REFACTORED HEADER & HERO STYLES
+   ========================================================================== */
+
+/* Add new color variable for consistency */
+:root {
+  --color-salesforce-blue: #0D9DDA;
+}
+
+/* Base styles for paragraphs from the inline style block */
+p {
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+
+/* General container for the entire header/hero section */
+[data-clientId="DivnQf4"] {
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  max-width: 1980px;
+}
+
+/* Inner container for the header content */
+[data-clientId="DivsXAd"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Brand/logo wrapper */
+[data-clientId="Span2zlj"] {
+  display: block;
+  position: relative;
+  width: fit-content;
+  /* min-height and min-width can be adjusted as needed */
+  min-height: 224px; 
+  min-width: 300px;
+}
+
+/* Ensure the logo image fills its container */
+#logo {
+  height: 100%;
+  width: 100%;
+}
+
+/* Header links containers */
+[data-clientId="DivHTiO"] {
+  display: flex;
+  position: relative;
+  width: fit-content;
+}
+
+[data-clientId="DivMA6W"] {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  z-index: 1500;
+}
+
+/* Mobile menu close button container */
+[data-clientId="DivTUMI"] {
+  display: none; /* Initially hidden, shown by JS/media queries */
+  position: relative;
+}
+
+/* Style for the close icon itself */
+[data-clientId="close_FILL0_wght400_GRAD0_opsz48GUOd"] {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+/* Grouping common styles for header navigation links */
+[data-clientId="SpanpQZB"],
+[data-clientId="SpanNUvF"],
+[data-clientId="SpanZKHO"],
+[data-clientId="SpandwWw"] {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  z-index: 1;
+}
+
+/* Header CTA button */
+[data-clientId="ButtonGFFs"] {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  min-height: 56px;
+}
+
+/* Mobile menu hamburger icon */
+[data-clientId="DivTano"] {
+  display: none; /* Initially hidden, shown by media queries */
+  position: relative;
+  height: 15px;
+  width: 35px;
+  margin: 0;
+}
+
+/* Hero section main container */
+[data-clientId="DivzHr7"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px 0;
+}
+
+/* Hero section left column (text content) */
+[data-clientId="DivhSia"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 575px;
+}
+
+/* Hero heading and paragraph */
+[data-clientId="Span8Pmt"],
+[data-clientId="SpanRYbJ"] {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+[data-clientId="SpanRYbJ"] {
+  z-index: 1;
+}
+
+/* Styling for the highlighted text within the hero heading and paragraph */
+[data-clientId="Span8Pmt"] p span {
+  color: var(--color-accent);
+}
+
+[data-clientId="SpanRYbJ"] p span {
+  color: var(--color-salesforce-blue);
+}
+
+/* Container for the email form */
+[data-clientId="Divu2Dn"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+/* Styles for the input field and submit button */
+[data-clientId="Input8BGu"] {
+  min-height: 56px;
+  min-width: 350px;
+  width: 100%; /* Ensure input takes up available space */
+}
+
+[data-clientId="ButtonwpHh"] {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  z-index: 1;
+  min-height: 56px;
+}
+
+/* Hero section right column (image) */
+[data-clientId="Div6qx1"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 575px;
+  height: 600px;
+}
+
+/* Hero image positioning */
+[data-clientId="dugba-cauley-hushie-6MNmDi1hc_Y-unsplashMmlm"] {
+  display: block;
+  position: relative;
+  height: 620px;
+  width: fit-content;
+  max-width: 475px;
+  min-height: 500px;
+  margin: -20px 0 0;
+}
+
+/* General rule to remove text decoration from links in header buttons and nav */
+[data-clientId="DivMA6W"] a,
+[data-clientId="ButtonGFFs"] a {
+  text-decoration: none;
+}
+
+
+
+/* ==========================================================================
+   REFACTORED HOME PAGE CONTENT
+   ========================================================================== */
+
+/* --- General Section Wrappers --- */
+[data-clientId="DivqGBp"],
+[data-clientId="DivM9Je"],
+[data-clientId="DivTymA"] {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1980px;
+}
+[data-clientId="DivM9Je"] {
+  height: fit-content;
+  z-index: 1;
+}
+
+/* --- About Section --- */
+[data-clientId="DivBwJg"],
+[data-clientId="DivzgpE"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+[data-clientId="Spans51S"],
+[data-clientId="SpanK1oD"] {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  z-index: 1;
+}
+[data-clientId="Spans51S"] {
+  max-width: 650px;
+}
+[data-clientId="SpanK1oD"] {
+  max-width: 400px;
+}
+[data-clientId="Spans51S"] p span,
+[data-clientId="SpanK1oD"] p span,
+[data-clientId="SpanYeYI"] p span {
+  color: var(--color-salesforce-blue);
+}
+[data-clientId="DivjMGy"],
+[data-clientId="DivfuxI"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 575px;
+}
+[data-clientId="DivjMGy"] {
+  margin: 0 auto;
+}
+[data-clientId="DivD0VE"],
+[data-clientId="Divn5dQ"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+[data-clientId="SpanwhYr"],
+[data-clientId="Spant8Mg"],
+[data-clientId="SpanQrLG"],
+[data-clientId="Spanut4f"] {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  z-index: 1;
+}
+[data-clientId="SpanwhYr"] p:last-child,
+[data-clientId="SpanQrLG"] p:last-child {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+[data-clientId="dugba-cauley-hushie-6MNmDi1hc_Y-unsplashpYUM"],
+[data-clientId="dugba-cauley-hushie-6MNmDi1hc_Y-unsplasha9pO"] {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  min-height: 500px;
+}
+
+/* --- Section Titles ("Premier Offerings", "What Our Clients Say") --- */
+#ourproducts [data-clientId="SpaneuAl"],
+#ourproducts [data-clientId="Spanb2dd"] {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* --- Testimonials Section --- */
+[data-clientId="DivNGy8"],
+[data-clientId="Divf9nZ"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  z-index: 1;
+}
+[data-clientId="Divwk85"],
+[data-clientId="DivIOHp"],
+[data-clientId="DivN2Sm"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  z-index: 1;
+}
+[data-clientId="Spanrh5g"],
+[data-clientId="SpandJ85"],
+[data-clientId="SpanLd0b"] {
+  display: block;
+  position: relative;
+  width: auto;
+  height: fit-content;
+  z-index: 1;
+}
+[data-clientId="DivYwAQ"],
+[data-clientId="DivheH3"],
+[data-clientId="DivdZMY"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+[data-clientId="aiony-haust-3TLl_97HNJo-unsplashsgSP"],
+[data-clientId="aiony-haust-3TLl_97HNJo-unsplashCf6X"],
+[data-clientId="aiony-haust-3TLl_97HNJo-unsplashDh0u"] {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+[data-clientId="DivslBU"],
+[data-clientId="DivMNny"],
+[data-clientId="Divdwo9"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: fit-content;
+  z-index: 1;
+}
+[data-clientId="SpanAfpH"], [data-clientId="Spanw4w2"],
+[data-clientId="SpannsPh"], [data-clientId="Spana7mm"],
+[data-clientId="SpanOiaO"], [data-clientId="SpanlZOE"] {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  z-index: 1;
+}
+
+/* --- Contact Section --- */
+[data-clientId="DivxFEo"],
+[data-clientId="DivN0Wr"],
+[data-clientId="DivHpdj"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+[data-clientId="SpanYeYI"],
+[data-clientId="Span8GHg"] {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  z-index: 1;
+}
+[data-clientId="SpanYeYI"] { max-width: 850px; }
+[data-clientId="Span8GHg"] { max-width: 720px; }
+[data-clientId="SectionHmCD"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: fit-content;
+  margin: 0 auto;
+  z-index: 1;
+}
+[data-clientId="Section5rfl"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  height: fit-content;
+  z-index: 1;
+}
+[data-clientId="Sectiont7g4"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: fit-content;
+  margin: auto 0;
+}
+[data-clientId="SpanTadu"], [data-clientId="SpanLw6L"],
+[data-clientId="SpanVzuy"], [data-clientId="SpanD2tV"],
+[data-clientId="SpansKSB"] {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: auto;
+}
+[data-clientId="DivRTzO"],
+[data-clientId="Div0NDp"],
+[data-clientId="DivczDr"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+[data-clientId="SectioncNGR"],
+[data-clientId="SectionM6VJ"],
+[data-clientId="Sectionq7Ct"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+}
+[data-clientId="InputJTjk"],
+[data-clientId="InputRgx9"] {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+[data-clientId="InputJTjk"] input,
+[data-clientId="InputRgx9"] input {
+  height: 100%;
+  width: 100%;
+}
+[data-clientId="TextAreaXreE"] {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  z-index: 15050; /* Preserving high z-index */
+}
+[data-clientId="TextAreaXreE"] textarea {
+  width: 100%;
+  height: 100%;
+}
+[data-clientId="ButtonqMMh"] {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 10px;
+  min-width: 200px;
+  z-index: 1;
+}
+[data-clientId="Component_13848dj"] {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  height: fit-content;
+  margin: auto;
+}
+
+/* --- Counter Section --- */
+[data-clientId="DivtptK"],
+[data-clientId="Divjjm8"],
+[data-clientId="Divy9dW"] {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+[data-clientId="SpanzNlv"], [data-clientId="SpanNRFN"],
+[data-clientId="SpanPIHF"], [data-clientId="SpanptBl"],
+[data-clientId="SpanQUzy"], [data-clientId="SpanNIxs"] {
+  display: block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  max-width: 850px;
+  z-index: 1;
+}
+
+h4.subheader{
+  font-size:20px;
+  text-align:center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0,0,0,.5);border-radius: 5px;padding: 16px;
+}
+
+.videocontainer {
+      display: flex; justify-content: center; flex-wrap: wrap; max-width: 1200px; margin: auto;
+
+}
+.iframevideo{
+  flex: 1 1 45%; max-width: 516px; margin: 10px;
+}

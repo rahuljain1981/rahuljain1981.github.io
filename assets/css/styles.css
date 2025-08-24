@@ -8,7 +8,7 @@
   --font-tertiary: 'Nunito Sans', sans-serif;
   --font-roboto: Roboto, sans-serif;
   
-  --color-primary: #000000;
+  --color-primary: #555;
   --color-white: #ffffff;
   --color-accent: #FFCE31;
   --color-accent-light: #FFF0BF;
@@ -1187,6 +1187,10 @@
    FOOTER STYLES
    ========================================================================== */
 
+.footer-hero-container{
+  color: var(--color-dark)!important;
+}
+
 [data-clientId="Span71ui"] {
   font-family: var(--font-primary);
   font-size: 80px;
@@ -1798,6 +1802,7 @@ html {
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
+        background-color: var(--color-gray-light);
     }
 
     .opcontainer .row {
@@ -1816,15 +1821,21 @@ html {
     }
 
     .opcontainer .card {
-        background-color: #FFF0BF;
+      
+        /**background-color: #FFF0BF;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         border: 1px solid #FFCE31;
         border-radius: 40px;
-        overflow: hidden;
-        transition: transform 0.2s;
-        flex: 1;
+        overflow: hidden;**/
+        
+        /**flex: 1;
         display: flex;
-        flex-direction: column;
+        flex-direction: column;**/
+        background:  var(--color-white);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .opcontainer .card:hover {
@@ -2670,7 +2681,7 @@ p {
 }
 [data-clientId="SpanwhYr"] p:last-child,
 [data-clientId="SpanQrLG"] p:last-child {
-  font-size: 10px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 [data-clientId="dugba-cauley-hushie-6MNmDi1hc_Y-unsplashpYUM"],
@@ -2908,8 +2919,8 @@ h4.subheader{
 
 body {
   font-family: 'Inter', sans-serif; /* Modern and readable */
-  color: #333;
-  line-height: 1.6;
+  color: var(--color-primary) !important;
+  line-height: 1.6 !important;
 }
 h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
@@ -2958,5 +2969,33 @@ h1, h2, h3 {
 .fa-youtube {
   background: #bb0000;
   color: white !important;
+}
+
+.testimonials {
+  background-color: var(--color-gray-light); /* A light background to separate it from other sections */
+}
+.blockquotestyle {
+  font-style: italic !important;
+  font-size: 1.1em !important;
+  margin-bottom: 20px !important;
+}
+.cite {
+  font-weight: bold;
+  color: var(--color-salesforce-blue);
+}
+
+
+.service-description:hover {
+  text-decoration: none !important;
+}
+
+
+.service-description .inner-text{
+  
+  color: var(--color-dark) !important; /* Even Darker Gray for Body Text */
+}
+
+.service-description .text-size{
+  font-size: 18px !important;
 }
 

@@ -40,15 +40,7 @@
     </script>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/46583007.js"></script>
-    <script>
-            document.querySelectorAll('.faq-question').forEach(button => {
-               button.addEventListener('click', () => {
-                  const answer = button.nextElementSibling;
-                  answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-                  button.classList.toggle('active');
-               });
-            });
-    </script>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="script/bootstrap.bundle.min.js"></script>
@@ -133,7 +125,7 @@
                         </form>
                       </div>
                   </div>
-                  <div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="Div6qx1" data-clientid="Div6qx1" data-displayname="Hero Section Right">
+                  <div data-type="grid-layout" class="react-grid-item ltr false cd-padding opcontainer" id="Div6qx1" data-clientid="Div6qx1" data-displayname="Hero Section Right">
                       <span id="dugba-cauley-hushie-6MNmDi1hc_Y-unsplashMmlm" data-displayname="Hero Image" class="react-grid-item ltr false">
                         <img class="codeylabsofferingimage" data-clientid="dugba-cauley-hushie-6MNmDi1hc_Y-unsplashMmlm" id="dugba-cauley-hushie-6MNmDi1hc_Y-unsplashMmlm-id" src="/assets/img/CodeyLabsOffering.png" alt="sl">
                       </span>
@@ -149,6 +141,14 @@
             {% include footer-custom.html %}
           </footer>
     </section>
-    
+    <script>
+            document.querySelectorAll('.faq-question').forEach(button => {
+               button.addEventListener('click', () => {
+                  const answer = button.nextElementSibling;
+                  answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                  button.classList.toggle('active');
+               });
+            });
+    </script>
   </body>
 </html>

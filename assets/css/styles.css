@@ -1620,6 +1620,7 @@ html {
         @media screen and (max-width: 375px) {
             [data-clientId="Span8Pmt"], [data-clientId="Span71ui"] {
                 font-size:50px;
+                line-height: 50px;
             }
 
             span.customer-logo{
@@ -1628,6 +1629,7 @@ html {
 
             [data-clientId="Spans51S"] {
                 font-size:45px;
+                line-height: 45px;
             }
 
             [data-clientId="DivtptK"], [data-clientId="Divjjm8"], [data-clientId="Divy9dW"]{
@@ -1639,6 +1641,7 @@ html {
         @media screen and (max-width: 430px) {
             [data-clientId="Span8Pmt"], [data-clientId="Span71ui"] {
                 font-size:50px;
+                line-height: 50px;
             }
 
             span.customer-logo{
@@ -1647,6 +1650,7 @@ html {
 
             [data-clientId="Spans51S"] {
                 font-size:45px;
+                line-height: 45px;
             }
 
             [data-clientId="DivtptK"], [data-clientId="Divjjm8"], [data-clientId="Divy9dW"]{

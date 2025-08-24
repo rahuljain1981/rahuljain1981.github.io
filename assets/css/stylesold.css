@@ -1893,7 +1893,7 @@ html {
                       height: 32px;
                       border-radius: 16px;
                       background-color: #0A66C2;
-                      font-family: "SF Pro Text", Helvetica, sans-serif;
+                      font-family: var(--font-primary);
                     }
 
 
@@ -1984,7 +1984,7 @@ html {
          }
          
          .myhighlights [data-clientId="Spanrh5g"] {
-             font-family: Raleway, sans-serif;
+             font-family: var(--font-primary);
              font-size: 16px;
              font-weight: 400;
              color: #000;
@@ -2001,7 +2001,7 @@ html {
          }
 
          .myhighlights [data-clientId="Spanrh5g-1"] {
-             font-family: Raleway, sans-serif;
+             font-family: var(--font-primary);
              font-size: 16px;
              font-weight: 400;
              color: #333;
@@ -2062,7 +2062,7 @@ html {
                }
                
                .col1 [data-clientId="Spant8Mg"] {
-                   font-family: Raleway, sans-serif;
+                   font-family: var(--font-primary);
                    font-size: 16px;
                    font-weight: 400;
                    color: #000;
@@ -2206,7 +2206,7 @@ html {
         background-color: #FFCE31;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        font-family: Arial, sans-serif;
+        font-family: var(--font-primary);
     }
 
     .codeylabs-form label {

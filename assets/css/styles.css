@@ -1767,7 +1767,7 @@ html {
 
 /* --- Modifier for the dark version ("Accelerators") --- */
 .product-card--dark {
-  background-color: #333; /* Using --color-dark from your variables */
+  background-color: var(--color-primary); /* Using --color-dark from your variables */
   color: var(--color-accent-light);
 }
 
@@ -2023,7 +2023,7 @@ html {
              color: #000;
              line-height: 26px;
              padding: 20px;
-             background-color: #ffce31;
+             background-color: var(--color-gray-light);
              border-radius: 10px;
              border: 1px solid #00000019;
              text-align: center;
@@ -2048,10 +2048,13 @@ html {
              display: flex;
              flex-direction: column;
              
+             background-color: var(--color-accent-subtle);
+    border-radius: var(--border-radius-medium);
+    border-color: var(--color-gray-border-alpha) var(--color-gray-border-alpha) var(--color-gray-border-alpha) var(--color-gray-border-alpha);
 
-                 background-color: #FFF0BF;
+                 
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-                border: 1px solid #FFCE31;
+                
                 
                 transition: transform 0.2s;
                 
@@ -2083,13 +2086,14 @@ html {
          }
 
  .col1[data-clientId="DivjMGy"] {
-                   padding: 20px 50px 20px 50px;
+                   
                    display: flex;
                    flex-direction: column;
                    justify-content: space-between;
                    align-items: center;
-                   background-color: #FFF0BF;
-                   border-radius: 40px;
+                   
+                   padding: 20px;
+                   background-color: var(--color-gray-light);
                    margin: 0 auto;
                    max-width: 575px;
                }
@@ -2098,7 +2102,7 @@ html {
                    font-family: Raleway, sans-serif;
                    font-size: 16px;
                    font-weight: 400;
-                   color: #000;
+                   color: var(--color-dark);
                    line-height: 26px;
                    text-align: center;
                    margin-bottom: 20px;
@@ -2154,9 +2158,8 @@ html {
          padding: 12px 15px;
          margin: auto 0;
          }
-         .keyhighlights{
-          background-color:#FFCE31;
-         }
+        
+
          @media screen and (max-width: 1080px){
          .col2{
          width: 720px;

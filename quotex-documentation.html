@@ -1,0 +1,1084 @@
+---
+layout: default
+title: Quote Experience (QuoteX)
+---
+<main class="cd-padding">
+
+    <section class="product-section">
+        
+
+<style>
+        
+
+    
+
+         :root {
+            --primary-red: #ff0000;
+            --primary-green: #274e13;
+            --primary-blue:var(--color-primary);
+            --primary-dark: #004499;
+            --text-dark: #1a1a1a;
+            --text-medium: #4a4a4a;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        
+
+       /* Hero Section */
+        .hero {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 .quote-red {
+            color: var(--primary-red);
+        }
+
+        .hero h1 .quote-green {
+            color: var(--primary-green);
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            background-color: var(--color-accent);
+            color:var(--color-dark);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: black;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color:black;
+        }
+
+        /* Sticky Navigation */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-scroll {
+            display: flex;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: thin;
+            -webkit-overflow-scrolling: touch;
+            gap: 8px;
+            padding: 12px 0;
+        }
+
+        .nav-scroll::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .nav-scroll::-webkit-scrollbar-track {
+            background: var(--bg-light);
+        }
+
+        .nav-scroll::-webkit-scrollbar-thumb {
+            background: var(--primary-blue);
+            border-radius: 4px;
+        }
+
+        .nav-item {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: var(--text-medium);
+            font-weight: 500;
+            border-radius: 6px;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 80px;
+            scroll-margin-top: 80px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            color: var(--text-medium);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .video-card {
+            background: var(--bg-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-content {
+            padding: 20px;
+        }
+
+        .video-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .video-description {
+            color: var(--text-medium);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .video-list {
+            list-style: none;
+            margin-top: 12px;
+        }
+
+        .video-list li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            color: var(--text-medium);
+            font-size: 0.9rem;
+        }
+
+        .video-list li:before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-size: 0.7rem;
+        }
+
+        /* Feature Highlight */
+        .feature-highlight {
+           
+            padding: 40px;
+            border-radius: 16px;
+            margin: 40px 0;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-highlight h3 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-highlight p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        /* Two Column Layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            align-items: start;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: var(--bg-white);
+            border-left: 4px solid var(--primary-blue);
+            padding: 24px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .info-box h4 {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .info-box p {
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        /* Release Section */
+        .release-card {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 20px;
+        }
+
+        .release-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .release-badge {
+            background: var(--primary-blue);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .release-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            padding: 60px 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .footer-cta p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            margin-top: 40px;
+            opacity: 0.9;
+        }
+
+        .footer-logo img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .back-nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .hero {
+                padding: 40px 20px 30px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .container {
+                padding: 30px 16px;
+            }
+
+            .feature-highlight {
+                padding: 30px 20px;
+            }
+
+            .footer-cta {
+                padding: 40px 20px;
+            }
+
+            .footer-cta h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-item {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        /* Back Navigation */
+        .back-nav {
+            background: var(--bg-white);
+            padding: 12px 0;
+        }
+
+        .back-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-medium);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+
+        .back-link:hover {
+            color: var(--primary-blue);
+            background: var(--bg-light);
+        }
+
+        .back-link svg {
+            transition: transform 0.3s ease;
+        }
+
+        .back-link:hover svg {
+            transform: translateX(-4px);
+        }
+
+        .quick-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .quick-link-item {
+            padding: 6px 14px;
+            background: var(--bg-light);
+            color: var(--text-medium);
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .quick-link-item:hover {
+            background: var(--primary-blue);
+            color: white;
+            border-color: var(--primary-blue);
+        }
+    </style>
+    <!-- Back Navigation -->
+    <div class="back-nav">
+        <div class="back-nav-container">
+            <a href="/quotexperience.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to QuoteX Home
+            </a>
+            <!--div class="quick-links">
+                <a href="/the-quotex/the-guide" class="quick-link-item">User Guide</a>
+                <a href="/the-quotex/known-issues" class="quick-link-item">Known Issues</a>
+                <a href="/the-quotex/release-notes" class="quick-link-item">Release Notes</a>
+                <a href="/the-quotex/the-faqs" class="quick-link-item">FAQs</a>
+            </div-->
+        </div>
+    </div>
+        <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1><span class="quote-red">Quote</span><span class="quote-green">X</span> Demos</h1>
+            <p>A powerful tool, 100% built on Salesforce platform, designed to provide solution architects with an easy and efficient way to estimate services deals. Generate SOWs in just a few clicks!</p>
+            <div class="hero-cta">
+                <a href="#overview" class="btn btn-primary">Watch Demo →</a>
+                <a href="https://www.codeylabs.com/quotexperience.html" target="_blank" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <div class="nav-scroll">
+                <a href="#overview" class="nav-item">📺 Overview</a>
+                <a href="#releases" class="nav-item">🚀 Releases</a>
+                <a href="#user-help" class="nav-item">👤 User Videos</a>
+                <a href="#admin-help" class="nav-item">⚙️ Admin Setup</a>
+                <a href="#sme-help" class="nav-item">🎯 SME Videos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <div class="section-header">
+                <div class="section-icon">📺</div>
+                <div>
+                    <h2 class="section-title"><span class="quote-red">Quote</span><span class="quote-green">X</span> for Professional Services</h2>
+                </div>
+            </div>
+
+            <div class="feature-highlight">
+                <h3>Watch a Sneak Peek of QuoteX</h3>
+                <p>See how our multi-role workflow streamlines the quoting process from start to finish</p>
+            </div>
+
+            <div class="two-col">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/20CEyd5lfgk" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">QuoteX Professional Services Demo</h3>
+                        <p class="video-description">Complete workflow demonstration featuring:</p>
+                        <ul class="video-list">
+                            <li><strong>Sales Manager:</strong> Angela Hu creates the quote request</li>
+                            <li><strong>Solution Architect:</strong> Vikram Singh creates quote with scopes and timeline</li>
+                            <li><strong>Subject Matter Expert:</strong> Sean Harris reviews scope details</li>
+                            <li><strong>Delivery Reviewer:</strong> Chris Tucker verifies and approves</li>
+                            <li><strong>Presales Lead:</strong> Shelly Mathew generates SOW</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/5eTtfYzm234" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">AI-Powered Quote Generation</h3>
+                        <p class="video-description">POC: Revolutionizing Project Quote Generation with PSC QuoteX and Generative AI. See how AI can streamline your quoting process and reduce manual effort.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Releases Section -->
+        <section id="releases" class="section">
+            <div class="section-header">
+                <div class="section-icon">🚀</div>
+                <h2 class="section-title"><span class="quote-red">Quote</span><span class="quote-green">X</span> Core - Releases</h2>
+            </div>
+
+            <div class="release-card">
+                <div class="release-header">
+                    <div class="release-badge">v1.78</div>
+                    <h3 class="release-title">Latest Release</h3>
+                </div>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/LMp5EC2rJ5g" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h4>🎨 What's New in v1.78</h4>
+                <p>Enhanced UI/UX, improved performance, new automation features, and expanded integration capabilities. Check out the video above for a complete walkthrough of all new features.</p>
+            </div>
+        </section>
+
+        <!-- User Help Videos Section -->
+        <section id="user-help" class="section">
+            <div class="section-header">
+                <div class="section-icon">👤</div>
+                <h2 class="section-title"><span class="quote-red">Quote</span><span class="quote-green">X</span> User Help Demos</h2>
+            </div>
+            <p class="section-subtitle">Learn how to use QuoteX effectively with these comprehensive user guides</p>
+
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/bCE0-E9zFls" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Scope Size Effort the Quote</h3>
+                        <p class="video-description">QuoteX provides a time-saving advantage with customizable templates, allowing users to easily create, save, and edit scope items for future projects, navigated efficiently by Scope Group/Library.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/mfwHBNDWXvs" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Timeline, SOW, Survey, Project</h3>
+                        <p class="video-description">While the core components help you close estimates faster, the framework approach lets you easily integrate other applications and extend QuoteX for your unique needs.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/EXvJjaUC8Qk" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Account/Customer Specific Rates</h3>
+                        <p class="video-description">Explore the pivotal feature of account-specific rates seamlessly integrated into the timeline creation process. See how PSC QuoteX empowers businesses to thrive with precision.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/DopopyyElR0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Match Your Branding</h3>
+                        <p class="video-description">Seamlessly match your company branding and Salesforce theme for a unified look and feel across all your quotes and documents.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/2t1DindFAYA" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Analogous Quoting</h3>
+                        <p class="video-description">Learn how to leverage past quotes to speed up your quoting process with intelligent analogous quoting capabilities.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/lyqslXRJZRA" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Add Scopes & Change Orders</h3>
+                        <p class="video-description">Effortlessly add scopes and save time on creating change orders with QuoteX's streamlined workflow.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Setup Section -->
+        <section id="admin-help" class="section">
+            <div class="section-header">
+                <div class="section-icon">⚙️</div>
+                <h2 class="section-title"><span class="quote-red">Quote</span><span class="quote-green">X</span> System Administrator Help Videos</h2>
+            </div>
+            <p class="section-subtitle">Complete setup and configuration guides for administrators</p>
+
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/0ltVmGzsO_I" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">First Time Installation</h3>
+                        <p class="video-description">How to Install QuoteX! Complete walkthrough of the installation process and initial configuration steps.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/hd8dgHvz6Jo" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Permissions Setup</h3>
+                        <p class="video-description">Enable users to view and utilize QuoteX Applications. Configure permission sets and user access levels.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/MhBhd8SKcMc" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">QuoteX Product Key</h3>
+                        <p class="video-description">Additional Security Layer with OrgId based QuoteX Key for enhanced protection.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/Gh7SLGBC5Gk" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Global Picklists Setup</h3>
+                        <p class="video-description">Enable users to view and utilize QuoteX core picklist values for consistent data entry.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/43BobA4Ac5k" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Custom Metadata Setup</h3>
+                        <p class="video-description">Enable users to view QuoteX Application Components through custom metadata configuration.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/LDWLL34_xRo" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Admin Setup</h3>
+                        <p class="video-description">Enable users to use QuoteX Applications. Complete administrative configuration guide.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/I02gggGI0Ls" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Highlight Items Setup</h3>
+                        <p class="video-description">Tailoring Quote Summary and Timeline Overview Fields for better visibility.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/eYc5ig7dA6E" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Regions Setup</h3>
+                        <p class="video-description">Categorizing and Managing Regions for Resources For RateCards.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/js_1v81p9i8" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Practices & Skills Setup</h3>
+                        <p class="video-description">Categorizing and Managing Departments & Skills for Resources For RateCards.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/6uAyoa232vg" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Rate Cards Setup</h3>
+                        <p class="video-description"><strong style="color: var(--primary-red);">The Heart Of QuoteX Solution</strong> - Configure your pricing structure.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/Ne_MjuSotsk" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">External Resources Setup</h3>
+                        <p class="video-description">Add non-billable roles in the Timeline and Quote for comprehensive project planning.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/nTDD5ubGyvg" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Other Costs Setup</h3>
+                        <p class="video-description">Additional costs in the overall project expenses configuration.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/JRcr13rIHfI" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Document Templates Setup</h3>
+                        <p class="video-description">Inbuilt Basic Document Generation Tool for creating professional SOWs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SME Help Videos Section -->
+        <section id="sme-help" class="section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <h2 class="section-title"><span class="quote-red">Quote</span><span class="quote-green">X</span> SME Help Videos</h2>
+            </div>
+            <p class="section-subtitle">Leverage the expertise and reliability of subject matter experts within your organization</p>
+
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/a_aO3a15ZBU" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Scope Libraries Setup</h3>
+                        <p class="video-description">Leverage the expertise and reliability of subject matter experts within your organization to build comprehensive scope libraries.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/1HJ2KPwiRYU" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Timeline Libraries Setup</h3>
+                        <p class="video-description">Leverage the expertise and reliability of subject matter experts to create reusable timeline templates.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/LEmX9onvCI0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Resourcing Plan Templates Setup</h3>
+                        <p class="video-description">Effortless Precision in Project Management Every Time with Resourcing Plan Templates.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/W47n5h_xdOM" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Staffing Rules Setup</h3>
+                        <p class="video-description">Crafting Role-Based Guidelines with Efficient Staffing Templates for optimal resource allocation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer CTA -->
+        <div class="footer-cta">
+            <h2>Ready to Transform Your Quoting Process?</h2>
+            <p>QuoteX is also available through CodeyLabs, our authorized reseller, providing full support and integration services for seamless implementation.</p>
+            <div class="hero-cta">
+                <a href="https://www.codeylabs.com/quotexperience.html" target="_blank" class="btn btn-primary">
+                    Learn More About QuoteX →
+                </a>
+                <a href="mailto:info@codeylabs.com" class="btn btn-secondary">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Active navigation highlighting
+        const sections = document.querySelectorAll('.section');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        function highlightNavigation() {
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                
+                if (window.pageYOffset >= sectionTop && 
+                    window.pageYOffset < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${currentSection}`) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        // Throttle scroll event for performance
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            if (scrollTimeout) {
+                window.cancelAnimationFrame(scrollTimeout);
+            }
+            scrollTimeout = window.requestAnimationFrame(() => {
+                highlightNavigation();
+            });
+        });
+
+        // Initial highlight
+        highlightNavigation();
+
+        // Add animation on scroll for video cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe video cards for animation
+        document.querySelectorAll('.video-card, .release-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Add stagger effect to video cards
+        document.querySelectorAll('.video-grid').forEach(grid => {
+            const cards = grid.querySelectorAll('.video-card');
+            cards.forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.1}s`;
+            });
+        });
+
+        // Parallax effect for hero
+        //window.addEventListener('scroll', () => {
+         //   const scrolled = window.pageYOffset;
+          //  const hero = document.querySelector('.hero');
+          //  if (hero && scrolled < hero.offsetHeight) {
+           //     hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            //    hero.style.opacity = 1 - (scrolled / hero.offsetHeight);
+            //}
+        //});
+
+        // Add hover effect to video cards
+        document.querySelectorAll('.video-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Lazy load YouTube videos on scroll (performance optimization)
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const iframe = entry.target;
+                    if (iframe.dataset.src) {
+                        iframe.src = iframe.dataset.src;
+                        iframe.removeAttribute('data-src');
+                        videoObserver.unobserve(iframe);
+                    }
+                }
+            });
+        }, { rootMargin: '50px' });
+
+        // Observe all iframes for lazy loading
+        document.querySelectorAll('iframe').forEach(iframe => {
+            videoObserver.observe(iframe);
+        });
+
+        // Add smooth reveal animation for info boxes
+        document.querySelectorAll('.info-box, .feature-highlight').forEach(box => {
+            box.style.opacity = '0';
+            box.style.transform = 'translateY(20px)';
+            box.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(box);
+        });
+    </script>
+
+
+
+
+
+   </section>
+</main>  

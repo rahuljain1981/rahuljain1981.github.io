@@ -493,6 +493,10 @@ keywords: DRTE installation, DRTE setup, DRTE configuration, Salesforce document
 
         /* Responsive */
         @media (max-width: 768px) {
+            .back-nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
             .hero {
                 padding: 40px 20px 30px;
             }
@@ -551,7 +555,91 @@ keywords: DRTE installation, DRTE setup, DRTE configuration, Salesforce document
                 font-size: 1.5rem;
             }
         }
+
+        /* Back Navigation */
+        .back-nav {
+            background: var(--bg-white);
+            padding: 12px 0;
+        }
+
+        .back-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-medium);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+
+        .back-link:hover {
+            color: var(--primary-blue);
+            background: var(--bg-light);
+        }
+
+        .back-link svg {
+            transition: transform 0.3s ease;
+        }
+
+        .back-link:hover svg {
+            transform: translateX(-4px);
+        }
+
+        .quick-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .quick-link-item {
+            padding: 6px 14px;
+            background: var(--bg-light);
+            color: var(--text-medium);
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .quick-link-item:hover {
+            background: var(--primary-blue);
+            color: white;
+            border-color: var(--primary-blue);
+        }
     </style>
+    <!-- Back Navigation -->
+    <div class="back-nav">
+        <div class="back-nav-container">
+            <a href="/dynamicrichtexteditor.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to DRTE Home
+            </a>
+            <!--div class="quick-links">
+                <a href="/the-quotex/the-guide" class="quick-link-item">User Guide</a>
+                <a href="/the-quotex/known-issues" class="quick-link-item">Known Issues</a>
+                <a href="/the-quotex/release-notes" class="quick-link-item">Release Notes</a>
+                <a href="/the-quotex/the-faqs" class="quick-link-item">FAQs</a>
+            </div-->
+        </div>
+    </div>
     <!-- Hero Section -->
     <div class="hero">
         <h1>DRTE Documentation</h1>

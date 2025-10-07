@@ -2912,7 +2912,7 @@ h4.subheader{
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(0,0,0,.5);border-radius: 5px;padding: 16px;
+  background-color: var(--color-accent)!important;border-radius: 5px;padding: 16px;
 }
 
 .videocontainer {

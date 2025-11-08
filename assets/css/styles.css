@@ -1420,6 +1420,29 @@
   width: 80px; 
 }
 
+ /* Base Style for the CTA Button Link */
+                    .button-cta {
+                        margin: 0 auto;
+                        display: block;
+                        padding: var(--spacing-sm) 42px var(--spacing-sm) 42px;
+                        background-color: var(--color-primary);
+                        border-radius: var(--border-radius-pill);
+                        border-width: 0px 0px 0px 0px;
+                        border-style: groove groove groove groove;
+                        border-color: var(--color-dark) var(--color-dark) var(--color-dark) var(--color-dark);
+                        font-family: var(--font-primary);
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: var(--color-accent);
+                        line-height: 26px;
+                        cursor: pointer;
+                        transition: var(--transition-base);
+                    }
+
+                    .button-cta a:hover {
+                        color: var(--color-accent);
+                    }
+
 /* ==========================================================================
    RESPONSIVE DESIGN
    ========================================================================== */

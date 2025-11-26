@@ -1416,9 +1416,7 @@
   }
 }
 
-.salesforce-partner-image{
-  width: 80px; 
-}
+
 
  /* Base Style for the CTA Button Link */
                     .button-cta {
@@ -1442,7 +1440,9 @@
                     .button-cta a:hover {
                         color: var(--color-accent);
                     }
-
+.salesforce-partner-image{
+  width: 80px; 
+}
 /* ==========================================================================
    RESPONSIVE DESIGN
    ========================================================================== */
@@ -1493,9 +1493,25 @@
     column-gap: var(--spacing-xl);
     row-gap: var(--spacing-lg);
   }
+
+  .salesforce-partner-image{
+        position: absolute;
+        top: 0px;
+        width: 50px;
+        right: 45%;
+        left: 45%;
+  }
 }
 
 @media (max-width: 480px) {
+  .salesforce-partner-image{
+        position: absolute;
+        top: 0px;
+        width: 50px;
+        right: 45%;
+        left: 45%;
+  }
+
   [data-clientId="DivnQf4"],
   [data-clientId="DivqGBp"],
   [data-clientId="DivBhnj"],

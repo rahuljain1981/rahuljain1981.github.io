@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<main class="cd-padding">
+    <section class="product-section" style="max-width: 900px; margin: 0 auto;">
+        <h2 class="page-header">Deal Registration</h2>
+        <h4 class="subheader">Register your prospect to secure a 6-month exclusivity period and unlock technical pre-sales support.</h4>
+
+        <div style="background: #ffffff; padding: 40px; border-radius: 8px; border: 1px solid #e1e1e1; margin-top: 30px;">
+            
+            <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWd000000dMTi" method="POST">
+                
+                <input type="hidden" maxlength="18" name="00NT1000003Mp6z" size="20" type="text" value="001T100000RW3w5IAD"/>
+                <input type=hidden name='captcha_settings' value='{"keyname":"CodeyLabsSite","fallback":"true","orgId":"00DWd000000dMTi","ts":""}'>
+                <input type=hidden name="oid" value="00DWd000000dMTi">
+                <input type=hidden name="retURL" value="https://www.codeylabs.com/thankyoupartner.html">
+
+                <!--  ----------------------------------------------------------------------  -->
+                <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+                <!--  these lines if you wish to test in debug mode.                          -->
+                <!--  <input type="hidden" name="debug" value=1>                              -->
+                <!--  <input type="hidden" name="debugEmail" value="rahul@codeylabs.com">     -->
+                <!--  ----------------------------------------------------------------------  --> 
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    
+                    <div style="grid-column: span 2;">
+                        <h3 style="border-bottom: 2px solid #00A1E0; padding-bottom: 10px; color: #333;">Prospect Information</h3>
+                    </div>
+                    
+                    <div>
+                        <label for="first_name">Contact First Name</label><br>
+                        <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
+                    </div>
+                    
+                    <div>
+                        <label for="last_name">Contact Last Name</label><br>
+                        <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
+                    </div>
+
+                    <div style="grid-column: span 2;">
+                        <label for="email">Contact Email</label><br>
+                        <input id="email" maxlength="80" name="email" size="20" type="text" required style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
+                    </div>
+
+                    <div>
+                        <label for="company">Company Name</label><br>
+                        <input id="company" maxlength="40" name="company" size="20" type="text" required style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
+                    </div>
+
+                    <div>
+                        <label for="URL">Company Website</label><br>
+                        <input id="URL" maxlength="80" name="URL" size="20" type="text" style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
+                    </div>
+
+                    <div>
+                        <label for="title">Decision Maker Title</label><br>
+                        <input id="title" maxlength="40" name="title" size="20" type="text" placeholder="e.g. CIO, CPO" style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
+                    </div>
+
+            
+
+                    <div style="grid-column: span 2;">
+                        <label for="description">Deal Overview & Pain Points</label><br>
+                        <textarea name="description" placeholder="Briefly describe the business need and which CodeyLabs product fits (QuoteX, DRTE, etc.)" style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px; height: 100px;"></textarea>
+                    </div>
+
+                </div>
+
+                <div style="margin-top: 30px; text-align: center;">
+                    <center><div class="g-recaptcha" data-sitekey="6LdB0RYsAAAAAJV7W3Cf6Mm-TBUfffKzG01P8lA7"></div></center><br/>
+                    <input type="submit" name="submit" value="Submit Registration" style="background-color: #00A1E0; color: white; padding: 15px 40px; border: none; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer;">
+                    <p style="font-size: 12px; color: #777; margin-top: 15px;">By submitting, you confirm this lead is not currently engaged in an active sales cycle with CodeyLabs.</p>
+                </div>
+
+            </form>
+        </div>
+    </section>
+</main>

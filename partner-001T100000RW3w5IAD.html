@@ -30,40 +30,40 @@ layout: default
                     </div>
                     
                     <div>
-                        <label for="first_name">Contact First Name</label><br>
-                        <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
+                        <label for="first_name">Contact First Name<span style="color: red;">*</span></label><br>
+                        <input id="first_name" required maxlength="40" name="first_name" size="20" type="text" required style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
                     </div>
                     
                     <div>
-                        <label for="last_name">Contact Last Name</label><br>
-                        <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
+                        <label for="last_name">Contact Last Name<span style="color: red;">*</span></label><br>
+                        <input id="last_name" required maxlength="80" name="last_name" size="20" type="text" required style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
                     </div>
 
                     <div style="grid-column: span 2;">
-                        <label for="email">Contact Email</label><br>
-                        <input id="email" maxlength="80" name="email" size="20" type="text" required style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
+                        <label for="email">Contact Email<span style="color: red;">*</span></label><br>
+                        <input id="email" required maxlength="80" name="email" size="20" type="email" required style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
                     </div>
 
                     <div>
-                        <label for="company">Company Name</label><br>
-                        <input id="company" maxlength="40" name="company" size="20" type="text" required style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
+                        <label for="company">Company Name<span style="color: red;">*</span></label><br>
+                        <input id="company" required maxlength="40" name="company" size="20" type="text" required style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
                     </div>
 
                     <div>
                         <label for="URL">Company Website</label><br>
-                        <input id="URL" maxlength="80" name="URL" size="20" type="text" style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
+                        <input id="URL"  maxlength="80" name="URL" size="20" type="text" style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
                     </div>
 
                     <div>
-                        <label for="title">Decision Maker Title</label><br>
-                        <input id="title" maxlength="40" name="title" size="20" type="text" placeholder="e.g. CIO, CPO" style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
+                        <label for="title">Decision Maker Title<span style="color: red;">*</span></label><br>
+                        <input id="title" required maxlength="40" name="title" size="20" type="text" placeholder="e.g. CIO, CPO" style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px;">
                     </div>
 
             
 
                     <div style="grid-column: span 2;">
                         <label for="description">Deal Overview & Pain Points</label><br>
-                        <textarea name="description" placeholder="Briefly describe the business need and which CodeyLabs product fits (QuoteX, DRTE, etc.)" style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px; height: 100px;"></textarea>
+                        <textarea required name="description" placeholder="Briefly describe the business need and which CodeyLabs product fits (QuoteX, DRTE, etc.)" style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px; height: 100px;"></textarea>
                     </div>
 
                 </div>

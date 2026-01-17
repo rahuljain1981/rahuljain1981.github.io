@@ -13,6 +13,24 @@ keywords: DRTE, Salesforce document generation, e-signature, user guides, docume
 
     <section class="product-section">
 
+        <!-- Back Navigation -->
+    <div class="back-nav">
+        <div class="back-nav-container">
+            <a href="/dynamicrichtexteditor.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to DRTE Home
+            </a>
+            <!--div class="quick-links">
+                <a href="/the-quotex/the-guide" class="quick-link-item">User Guide</a>
+                <a href="/the-quotex/known-issues" class="quick-link-item">Known Issues</a>
+                <a href="/the-quotex/release-notes" class="quick-link-item">Release Notes</a>
+                <a href="/the-quotex/the-faqs" class="quick-link-item">FAQs</a>
+            </div-->
+        </div>
+    </div>
+
         <div class="hero-module-card">
                 <div class="hero-content">
                     <div class="hero-badge">MOST IMPORTANT</div>
@@ -308,4 +326,47 @@ keywords: DRTE, Salesforce document generation, e-signature, user guides, docume
 .btn-download:hover {
     background-color: var(--color-accent);
 }
+
+/* Back Navigation */
+        .back-nav {
+            background: var(--bg-white);
+            padding: 12px 0;
+        }
+
+        .back-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-medium);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+
+        .back-link:hover {
+            color: var(--primary-blue);
+            background: var(--bg-light);
+        }
+
+        .back-link svg {
+            transition: transform 0.3s ease;
+        }
+
+        .back-link:hover svg {
+            transform: translateX(-4px);
+        }
 </style>  

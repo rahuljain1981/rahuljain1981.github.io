@@ -16,6 +16,7 @@ layout: default
 
 <div class="codeylabs-form">
     <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DWd000000dMTi" method="POST">
+        <input type=hidden name='captcha_settings' value='{"keyname":"CodeyLabsSite","fallback":"true","orgId":"00DWd000000dMTi","ts":""}'>
         <input type="hidden" name="orgid" value="00DWd000000dMTi">
         <input type="hidden" name="retURL" value="https://www.codeylabs.com/confirmation.html">
         
@@ -47,6 +48,7 @@ layout: default
         <label for="issuedescription">Please describe the issue in detail.</label>
         <textarea id="issuedescription" name="description" required></textarea><br>
 
+        <div class="g-recaptcha" data-sitekey="6LdB0RYsAAAAAJV7W3Cf6Mm-TBUfffKzG01P8lA7"></div><br>
         <input data-clientid="Button8Ql6" type="submit" name="submit" value="Submit">
     </form>
 </div>

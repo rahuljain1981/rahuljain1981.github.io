@@ -1,0 +1,264 @@
+---
+layout: default
+pagename: howtobyob.html
+description: Salesforce-native branding tool to create custom UI themes, highlight fields, override labels, and apply contextual help without code.
+title: Salesforce Branding Sets – Custom Themes and UI Styling
+ogimage: /assets/img/BYOB/1.png
+ogtitle: Salesforce Branding Sets – Customize the Look of Your Salesforce Org
+ogdescription: Customize Salesforce with Branding Sets — a no-code tool for admins to apply themes, colors, highlights and field labels natively.
+keywords: Salesforce, Branding Sets, custom themes, UI styling, no-code, Salesforce admin tools, field highlights, label overrides, contextual help
+---
+
+<main class="cd-padding">
+
+    <section class="product-section">
+
+        <!-- Back Navigation -->
+    <div class="back-nav">
+        <div class="back-nav-container">
+            <a href="/brandingsets.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to BYOB - BrandingSets Home
+            </a>
+            
+        </div>
+    </div>
+
+        <div class="hero-module-card">
+                <div class="hero-content">
+                    <div class="hero-badge">MOST IMPORTANT</div>
+                    <h2 class="hero-title">Complete End-User & Admin Guide</h2>
+                    <p class="hero-subtitle">The master manual for CodeyLabs Build Your Own Branding/Branding Sets. Includes setup, full list of BYOB components, component configurations.</p>
+                    
+                    <div class="hero-features">
+                        <span><i class="icon">✔️</i> Prerequisites & Setup</span>
+                        <span><i class="icon">✔️</i> Components List</span>
+                        <span><i class="icon">✔️</i> Configuration</span>
+                    </div>
+
+                    <a href="/assets/docs/BYOB/BYOB v1.21 (Community).pdf" class="btn-hero-download" target="_blank">
+                        Download Complete Guide (PDF)
+                    </a>
+                </div>
+                <div class="hero-icon-large">📚</div>
+            </div>
+        <h2 class="page-header">BYOB - Core Product Component Guides</h2>
+       
+      <div class="product-grid product-showcase-page">
+
+        <section class="docs-section cd-padding">
+      <div class="module-grid">
+            <div class="module-card">
+                <div class="module-icon">🏷️</div>
+                <h3 class="module-title">Field Label Overrider</h3>
+                <p class="module-desc">Dynamically rename field labels based on record data, such as changing 'National ID' to 'SSN' or 'CPF' based on the country.</p>
+                <a href="/assets/docs/BYOB/BYOB - Field Label Overrider.pdf" class="btn-download" target="_blank">View Guide</a>
+            </div>
+
+           
+
+
+
+            </div>
+        </section>
+      </div>
+
+      
+      </section>
+</main>
+<style>
+.hero-module-card {
+    background: linear-gradient(135deg, #f8fbff 0%, #ffce31 100%);
+    border: 2px solid #555555;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 40px;
+    margin-left:10%;
+    margin-right:10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 112, 210, 0.1);
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: #0070d2;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero-title {
+    font-size: 2rem;
+    color: #080707;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.hero-features {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.btn-hero-download {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color:var(--color-primary, #0070d2);
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.btn-hero-download:hover {
+    background-color: var(--color-accent);
+}
+
+.hero-icon-large {
+    font-size: 120px;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .hero-module-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+    .hero-content {
+        padding-right: 0;
+    }
+    .hero-icon-large {
+        display: none;
+    }
+    .hero-features {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+</style>
+<style>
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.module-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.module-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.module-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.module-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0070d2; /* Salesforce Blue */
+    margin-bottom: 10px;
+}
+
+.module-desc {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-primary, #0070d2);
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.btn-download:hover {
+    background-color: var(--color-accent);
+}
+
+/* Back Navigation */
+        .back-nav {
+            background: var(--bg-white);
+            padding: 12px 0;
+        }
+
+        .back-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-medium);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+
+        .back-link:hover {
+            color: var(--primary-blue);
+            background: var(--bg-light);
+        }
+
+        .back-link svg {
+            transition: transform 0.3s ease;
+        }
+
+        .back-link:hover svg {
+            transform: translateX(-4px);
+        }
+</style>  

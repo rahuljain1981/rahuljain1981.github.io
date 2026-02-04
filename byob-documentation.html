@@ -1,0 +1,819 @@
+---
+layout: default
+pagename: byob-documentation.html
+title: BYOB Installation, Setup & Configuration Guide
+description: Complete guide for installing, configuring, and using BYOB in Salesforce. Watch step-by-step video tutorials for byob setup.
+ogtitle: BYOB Documentation - Installation, Setup & Video Tutorials
+ogdescription: Learn how to install, configure, and master BYOB with our comprehensive video guides and documentation for branding sets, field label overrider, field highlighter.
+ogimage: /assets/img/BYOB/BYOB.png
+keywords: BYOB installation, BYOB setup, BYOB configuration, Salesforce document generation tutorial, BYOB video guide, BYOB documentation
+---
+<main class="cd-padding">
+    <section class="product-section">
+<style>
+        
+
+        :root {
+            --primary-color: var(--color-primary);
+            --primary-dark: #004499;
+            --secondary-color: #00a4bd;
+            --accent-color: #ff6b35;
+            --text-dark: #1a1a1a;
+            --text-medium: #4a4a4a;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --success-color: #10b981;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        
+
+        /* Hero Section */
+        .hero {
+            
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            background-color: var(--color-accent);
+            color:var(--color-dark);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: black;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+        }
+
+        /* Sticky Navigation */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            z-index: 100;
+            padding: 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-scroll {
+            display: flex;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: thin;
+            -webkit-overflow-scrolling: touch;
+            gap: 8px;
+            padding: 12px 0;
+        }
+
+        .nav-scroll::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .nav-scroll::-webkit-scrollbar-track {
+            background: var(--bg-light);
+        }
+
+        .nav-scroll::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        .nav-item {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: var(--text-medium);
+            font-weight: 500;
+            border-radius: 6px;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 80px;
+            scroll-margin-top: 80px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .card-number {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .card-content {
+            color: var(--text-medium);
+            margin-bottom: 16px;
+        }
+
+        .card-list {
+            list-style: none;
+            margin: 16px 0;
+        }
+
+        .card-list li {
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+            color: var(--text-medium);
+        }
+
+        .card-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: 700;
+        }
+
+        /* Video Container */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Feature Cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .feature-card:hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .feature-desc {
+            color: var(--text-medium);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+        }
+
+        .feature-link:hover {
+            color: var(--primary-dark);
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        .faq-item {
+            background: var(--bg-white);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 24px;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--primary-color);
+        }
+
+        .faq-question:after {
+            content: "+";
+            font-size: 1.8rem;
+            font-weight: 300;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question:after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer-content {
+            padding: 0 24px 20px 24px;
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Info Box */
+        .info-box {
+            
+            background: linear-gradient(135deg, var(--color-gray-light) 0%, var(--color-gray) 100%);
+            color: black;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .info-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .info-box p {
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        /* Tutorial List */
+        .tutorial-list {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .tutorial-list h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .tutorial-list ul {
+            list-style: none;
+        }
+
+        .tutorial-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-medium);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .tutorial-list li:last-child {
+            border-bottom: none;
+        }
+
+        .tutorial-list li:before {
+            content: "▶";
+            color: var(--primary-color);
+            font-size: 0.8rem;
+        }
+
+        /* Two Column Layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            align-items: start;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-nav-toggle {
+            display: none;
+            padding: 12px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .back-nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .hero {
+                padding: 40px 20px 30px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .container {
+                padding: 30px 16px;
+            }
+
+            .nav-item {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 20px;
+            }
+
+            .faq-question {
+                padding: 16px;
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Back Navigation */
+        .back-nav {
+            background: var(--bg-white);
+            padding: 12px 0;
+        }
+
+        .back-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-medium);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+
+        .back-link:hover {
+            color: var(--primary-blue);
+            background: var(--bg-light);
+        }
+
+        .back-link svg {
+            transition: transform 0.3s ease;
+        }
+
+        .back-link:hover svg {
+            transform: translateX(-4px);
+        }
+
+        .quick-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .quick-link-item {
+            padding: 6px 14px;
+            background: var(--bg-light);
+            color: var(--text-medium);
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .quick-link-item:hover {
+            background: var(--primary-blue);
+            color: white;
+            border-color: var(--primary-blue);
+        }
+    </style>
+    <!-- Back Navigation -->
+    <div class="back-nav">
+        <div class="back-nav-container">
+            <a href="/brandingsets.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to BYOB Home
+            </a>
+            <!--div class="quick-links">
+                <a href="/the-quotex/the-guide" class="quick-link-item">User Guide</a>
+                <a href="/the-quotex/known-issues" class="quick-link-item">Known Issues</a>
+                <a href="/the-quotex/release-notes" class="quick-link-item">Release Notes</a>
+                <a href="/the-quotex/the-faqs" class="quick-link-item">FAQs</a>
+            </div-->
+        </div>
+    </div>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>BYOB Documentation</h1>
+        <p>Complete guide for installing, configuring, and mastering BYOB UX components in Salesforce</p>
+        <div class="hero-cta">
+            <a href="#installation" class="btn btn-primary">Get Started →</a>
+            <a href="/support.html" class="btn btn-secondary">Contact Support</a>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <div class="nav-scroll">
+                <a href="#installation" class="nav-item">🚀 Installation</a>
+                <a href="#advanced" class="nav-item">🔥 Advanced use cases</a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        
+        <!-- Installation Section -->
+        <section id="installation" class="section">
+            <div class="section-header">
+                <div class="section-icon">🚀</div>
+                <h2 class="section-title">Installation & Permissions</h2>
+            </div>
+
+            <div class="two-col">
+                <div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-number">1</div>
+                            <div>
+                                <h3 class="card-title">Prerequisites & Install</h3>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p>Before installing BYOB, ensure your Salesforce org meets these requirements:</p>
+                            <ul class="card-list">
+                                <li>Salesforce Enterprise, Unlimited, or Performance Edition</li>
+                                <li>Administrator access to install managed packages</li>
+                                <li>Use Lightning Web Secuirty is active.</li>
+                                <li>Reach out to <a href="mailto:info@codeylabs.com">info@codeylabs.com</a> for latest GA installation URL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/CpUbk3AfGtY" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Features Section -->
+        <section id="advanced" class="section">
+            <div class="section-header">
+                <div class="section-icon">🔥</div>
+                <h2 class="section-title">Advanced Use Cases</h2>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3 class="feature-title">Conditional Content</h3>
+                    <p class="feature-desc">Show or hide sections of documents based on field values or custom logic.</p>
+                    <a href="https://www.youtube.com/embed/3_bwKp_OTyo" target="_blank" class="feature-link">Watch Tutorial →</a>
+                </div>
+
+                
+            </div>
+        </section>
+
+
+        <!-- Call to Action -->
+        <section class="section">
+            <div class="info-box" style="text-align: center;">
+                <h3 style="font-size: 2rem; margin-bottom: 16px;">Ready to elevate your branding?</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 24px;">Get started with Build Your Own Branding by CodeyLabs today.</p>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="mailto:info@codeylabs.com" title="info@codeylabs.com" class="btn btn-primary">Request Installation URL</a>
+                    <a href="mailto:support@codeylabs.com" title="support@codeylabs.com" class="btn btn-secondary">Contact Support</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+     <script>
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        
+
+        // Active navigation highlighting
+        const sections = document.querySelectorAll('.section');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        function highlightNavigation() {
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                
+                if (window.pageYOffset >= sectionTop && 
+                    window.pageYOffset < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${currentSection}`) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        // Throttle scroll event for performance
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            if (scrollTimeout) {
+                window.cancelAnimationFrame(scrollTimeout);
+            }
+            scrollTimeout = window.requestAnimationFrame(() => {
+                highlightNavigation();
+            });
+        });
+
+        // Initial highlight
+        highlightNavigation();
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards for animation
+        document.querySelectorAll('.card, .feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+    </section>
+</main>
+   

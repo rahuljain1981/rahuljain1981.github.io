@@ -9,7 +9,7 @@ layout: default
 
         <div style="background: #ffffff; padding: 40px; border-radius: 8px; border: 1px solid #e1e1e1; margin-top: 30px;">
             
-            <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWd000000dMTi" method="POST">
+            <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWd000000dMTi" method="POST" onsubmit="return validateForm(event)">
                 
                 <input type="hidden" maxlength="18" name="00NT1000003Mp6z" size="20" type="text" value="001T100000XG7QnIAL"/>
                 <input type=hidden name='captcha_settings' value='{"keyname":"CodeyLabsSite","fallback":"true","orgId":"00DWd000000dMTi","ts":""}'>
@@ -77,4 +77,17 @@ layout: default
             </form>
         </div>
     </section>
+    <script type="text/javascript">
+            function validateForm(e) {
+                const recaptchaResponse = grecaptcha.getResponse();
+                
+                if (!recaptchaResponse) {
+                   e.preventDefault();
+                   alert("Please complete the reCAPTCHA verification before submitting.");
+                   return false;
+                }
+                
+                return true;
+            }
+            </script>
 </main>

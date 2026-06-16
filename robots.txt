@@ -9,3 +9,4 @@ Allow: /
 # Add the URL to your sitemap here.
 # This helps search engines discover all the pages on your site.
 Sitemap: https://www.codeylabs.com/sitemap.xml
+Sitemap: https://help.codeylabs.com/sitemap

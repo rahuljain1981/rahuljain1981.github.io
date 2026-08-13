@@ -1860,7 +1860,7 @@ html {
 
     .opcontainer .column {
         flex: 1;
-        min-width: 300px;
+        min-width: 290px;
         margin-bottom: 16px;
         padding: 0 20px;
         box-sizing: border-box;

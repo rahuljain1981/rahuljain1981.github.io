@@ -2635,7 +2635,7 @@ p {
   display: flex;
   position: relative;
   width: 100%;
-  max-width: 575px;
+  /**max-width: 575px;**/
   height: 600px;
 }
 

@@ -1,171 +1,139 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
+    <meta charset="UTF-8">
     <title>{{ page.title | default: site.title }}</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMWLVSY8JW"></script>
-    <meta name="robots" content="index, follow" >
+    <meta name="robots" content="index, follow">
     <meta name="description" content="{{ page.description | default: site.description }}">
-    <meta property="og:description" content="{{ page.ogdescription | default: site.ogdescription }}" >
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="{{ page.ogtitle | default: site.ogtitle }}">
-    <meta property="og:site_name" content="CodeyLabs">
-    <meta property="og:image" content="{{ page.ogimage | default: site.ogimage }}" >
-    <meta property="og:url" content="https://www.codeylabs.com/{{ page.pagename | default: site.pagename }}">
-    <meta property="twitter:title" content="{{ page.title | default: site.title }}" data-react-helmet="true">
-    <meta charset="UTF-8">
-    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
     <meta name="author" content="Rahul Jain">
-    
-    <meta name="keywords" content="{{ page.keywords | default: site.keywords }}" >
+    <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#FFCE31">
+    <link rel="canonical" href="https://www.codeylabs.com/{{ page.pagename | default: site.pagename }}">
+
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeyLabs">
+    <meta property="og:title" content="{{ page.ogtitle | default: site.ogtitle }}">
+    <meta property="og:description" content="{{ page.ogdescription | default: site.ogdescription }}">
+    <meta property="og:image" content="{{ page.ogimage | default: site.ogimage }}">
+    <meta property="og:url" content="https://www.codeylabs.com/{{ page.pagename | default: site.pagename }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="{{ page.title | default: site.title }}" data-react-helmet="true">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="/assets/css/cssfamily.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/reqStyles.css">
     <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="shortcut icon" href="/assets/img/codeylabs-square_official-logo.ico" type="image/x-icon" data-react-helmet="true">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Setup Google Analytics -->
     {% include head-custom-google-analytics.html %}
-
-  
     <!-- end custom head snippets -->
 
-<script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'G-YMWLVSY8JW');
     </script>
-    
+
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/46583007.js"></script>
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="script/bootstrap.bundle.min.js"></script>
+    <script src="/script/bootstrap.bundle.min.js"></script>
 
-    
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
-    function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+    function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);
     </script>
 
     <script type="text/javascript">
             function validateForm(e) {
                 const recaptchaResponse = grecaptcha.getResponse();
-                
+
                 if (!recaptchaResponse) {
                    e.preventDefault();
                    alert("Please complete the reCAPTCHA verification before submitting.");
                    return false;
                 }
-                
+
                 return true;
             }
-            </script>
-
+    </script>
   </head>
-  <body>   
-      <section id="heroSection" class="rgl-container page-preview" style="position: relative;">
-          <header>
-              <div data-type="grid-layout" class="react-grid-item ltr undefined cd-padding" id="DivnQf4" data-clientid="DivnQf4" data-displayname="Hero Section with Header">
-                <div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="DivsXAd" data-clientid="DivsXAd" data-displayname="Header ">
-                  <span id="Span2zlj" data-clientid="Span2zlj" data-displayname="Brand" class="react-grid-item ltr false">
-                    <a target="_self" href="index.html"><img class="" data-clientid="logo" id="logo" src="/assets/img/codeylabs_logo.svg"/></a>
-                  </span>
-                  <div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="DivHTiO" data-clientid="DivHTiO" data-displayname="Header Links Block">
-                      <div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="DivMA6W" data-clientid="DivMA6W" data-displayname="Header Links">
-                        <div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="DivTUMI" data-clientid="DivTUMI" data-displayname="close button">
-                            <span onclick="document.getElementById('DivHTiO').classList.remove('on');" id="close_FILL0_wght400_GRAD0_opsz48GUOd" data-displayname="image" class="react-grid-item ltr false">
-                              <img class="" data-clientid="close_FILL0_wght400_GRAD0_opsz48GUOd" id="close_FILL0_wght400_GRAD0_opsz48GUOd-id" src="/assets/img/close_fill0_wght400_grad0_opsz48svg_1699334576_27033.svg" alt="sl">
-                            </span>
-                        </div>
-                        <span id="SpanpQZB" data-clientid="SpanpQZB" data-displayname="Header Link 1" class="react-grid-item ltr false">
-                            <a rel="noreferrer" href="index.html" class="anchor-tag-reset cd-padding" target="_parent">
-                              <p>Home</p>
-                            </a>
-                        </span>
-                        <span id="SpanpQZB" data-clientid="SpanpQZB" data-displayname="Header Link 1" class="react-grid-item ltr false">
-                          <a rel="noreferrer" href="ourproducts.html" class="anchor-tag-reset cd-padding" target="_parent">
-                            <p>{{ site.ourproducts }}</p>
-                          </a>
-                        </span>
-                        <span id="SpanNUvF" data-clientid="SpanNUvF" data-displayname="Header Link 2" class="react-grid-item ltr false">
-                            <a rel="noreferrer" href="blogs.html" class="anchor-tag-reset cd-padding" target="_parent">
-                              <p>Blogs</p>
-                            </a>
-                        </span>
-                        <span id="SpandwWw" data-clientid="SpandwWw" data-displayname="Header Link 4" class="react-grid-item ltr false">
-                            <a rel="noreferrer" href="https://help.codeylabs.com" class="anchor-tag-reset cd-padding" target="_blank">
-                              <p>Help</p>
-                            </a>
-                        </span>
-                        <span id="SpanZKHO" data-clientid="SpanZKHO" data-displayname="Header Link 3" class="react-grid-item ltr false">
-                            <a rel="noreferrer" href="aboutus.html" class="anchor-tag-reset cd-padding" target="_parent">
-                              <p>About</p>
-                            </a>
-                        </span>
-                      </div>
-                  </div>
-                  <!--img class="salesforce-partner-image" src="/assets/img/salesforcepartner/Salesforce_Partner_Badge_RGB.png"-->
-                  <button id="ButtonGFFs" data-clientid="ButtonGFFs" data-displayname="Header CTA Button" class="react-grid-item ltr false">
-                      <a rel="noreferrer" href="index.html#contact" class="anchor-tag-reset cd-padding" target="_parent">
-                        <p>Contact Us</p>
-                      </a>
-                  </button>
-                  <button id="DivTano" onclick="document.getElementById('DivHTiO').classList.add('on');" data-clientid="DivTano" data-displayname="Header Menu Icon" class="react-grid-item ltr false">
-                  </button>
-                </div>
-                {% if page.url == "/" %}
-                <div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="DivzHr7" data-clientid="DivzHr7" data-displayname="Hero Section">
-                  <div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="DivhSia" data-clientid="DivhSia" data-displayname="Hero Section Left Block">
-                      <span id="Span8Pmt" data-clientid="Span8Pmt" data-displayname="Heading" class="react-grid-item ltr false">
-                        <h1><p><span>Salesforce</span> Solutions Built for Professional Services</p></h1>
-                        <span>Quote smarter. Operate better. Grow with confidence.</span>
-                        <!--p>Stop <span>Revenue Leakage</span> at the Estimate.</p-->
-                      </span>
-                      <span id="SpanRYbJ" data-clientid="SpanRYbJ" data-displayname="Paragraph" class="react-grid-item ltr false">
-                        <p>From complex project estimation to quoting and revenue operations, CodeyLabs builds Salesforce-native solutions that help professional services teams work smarter and protect margins.</p>
-                        <!--p>We deliver cutting-edge Salesforce solutions to transform your business on <span>Salesforce's</span> Force.com platform, transcending conventional boundaries with transformative accelerators.</p-->
-                      </span>
-                      <div data-type="grid-layout" class="react-grid-item ltr false cd-padding" id="Divu2Dn" data-clientid="Divu2Dn" data-displayname="Hero Section Input Block">
-                        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWd000000dMTi">
-                          <input type=hidden name="oid" value="00DWd000000dMTi">
-                          <input type=hidden name="retURL" value="https://www.codeylabs.com/thankyou.html">
-              
-                          <span id="Input8BGu" data-displayname="Input" class="react-grid-item ltr false">
-                              <input id="email" maxlength="80" name="email" data-clientid="Input8BGu" type="email" placeholder="Enter your email" class="non-draggable" required value="">
-                          </span>
-                          <!--input type="hidden" id="external" name="external" value="1" /-->
-                          <input id="last_name" maxlength="80" name="last_name" size="20" data-clientid="InputJTjk" type="hidden" placeholder=" " class="non-draggable" value="FollowUp">
-                          <!--input type="hidden" id="name" maxlength="80" name="name" /-->
-                          <textarea name="description" style="display:none;visibility:hidden;">Case Origin - From Enter Your Email and Learn More on Codeylabs site</textarea>
-                          <br/>
-                          <br/>
-                          <button type="submit" id="ButtonwpHh" data-clientid="ButtonwpHh" data-displayname="Button" class="react-grid-item ltr false">
-                              <p>Learn More</p>
-                          </button>
-                        </form>
-                      </div>
-                  </div>
-                  <div data-type="grid-layout" style="background:transparent;" class="react-grid-item ltr false cd-padding opcontainer" id="Div6qx1" data-clientid="Div6qx1" data-displayname="Hero Section Right">
-                      <span id="dugba-cauley-hushie-6MNmDi1hc_Y-unsplashMmlm" data-displayname="Hero Image" class="react-grid-item ltr false">
-                        <img class="codeylabsofferingimage" style="border-radius:5%;" id="dugba-cauley-hushie-6MNmDi1hc_Y-unsplashMmlm-id" src="/assets/img/CodeyLabsSuiteSite.jpg" alt="sl">
-                      </span>
-                  </div>
-                </div>
-                {% endif %}
+  <body>
+    <a class="cl-skip" href="#main">Skip to content</a>
+    <div class="cl-page" id="heroSection">
+      <header class="cl-header" id="clHeader">
+        <div class="cl-container cl-header__bar">
+          <a class="cl-logo" href="/index.html" aria-label="CodeyLabs home">
+            <img id="logo" src="/assets/img/codeylabs_logo.svg" alt="CodeyLabs" width="160" height="40">
+          </a>
+          <nav class="cl-nav" id="clNav" aria-label="Primary">
+            <a href="/index.html"{% if page.url == "/" or page.url == "/index.html" %} aria-current="page"{% endif %}>Home</a>
+            <a href="/ourproducts.html">{{ site.ourproducts }}</a>
+            <a href="/blogs.html">Blogs</a>
+            <a href="https://help.codeylabs.com" target="_blank" rel="noopener">Help</a>
+            <a href="/aboutus.html">About</a>
+            <a class="cl-nav__cta" href="/index.html#contact">Contact Us</a>
+          </nav>
+          <div class="cl-header__cta">
+            <a class="cl-btn cl-btn--primary cl-btn--sm" href="/index.html#contact">Contact Us</a>
+            <button class="cl-burger" id="clBurger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="clNav"><span></span></button>
+          </div>
+        </div>
+      </header>
+
+      {% if page.url == "/" or page.url == "/index.html" %}
+      <section class="cl-hero" aria-labelledby="heroTitle">
+        <div class="cl-container cl-hero__grid">
+          <div class="cl-hero__copy">
+            <span class="cl-pill">Salesforce-native &middot; Built for professional services</span>
+            <h1 id="heroTitle"><em>Salesforce</em> Solutions Built for Professional Services</h1>
+            <p class="cl-hero__tag">Quote smarter. Operate better. Grow with confidence.</p>
+            <p class="cl-hero__lead">From complex project estimation to quoting and revenue operations, CodeyLabs builds Salesforce-native solutions that help professional services teams work smarter and protect margins.</p>
+            <form class="cl-hero__form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&amp;orgId=00DWd000000dMTi">
+              <input type="hidden" name="oid" value="00DWd000000dMTi">
+              <input type="hidden" name="retURL" value="https://www.codeylabs.com/thankyou.html">
+              <label for="hero_email" class="sr-only" style="position:absolute;left:-9999px">Email address</label>
+              <input id="hero_email" maxlength="80" name="email" type="email" placeholder="Enter your email" required value="">
+              <input id="hero_last_name" maxlength="80" name="last_name" size="20" type="hidden" value="FollowUp">
+              <textarea name="description" style="display:none;visibility:hidden;">Case Origin - From Enter Your Email and Learn More on Codeylabs site</textarea>
+              <button type="submit" class="cl-btn cl-btn--primary">Learn More</button>
+            </form>
+            <p class="cl-hero__note">We'll reach out with details &mdash; no spam.</p>
+          </div>
+          <div class="cl-hero__visual">
+            <div class="cl-hero__frame">
+              <img src="/assets/img/CodeyLabsSuiteSite.jpg" alt="CodeyLabs product suite for Salesforce" width="800" height="600">
             </div>
-          </header>
+            <div class="cl-hero__badge">
+              <img src="/assets/img/salesforcepartner/Salesforce_Partner_Badge_RGB.png" alt="Salesforce Partner">
+              <span>Salesforce Partner<small>Native managed packages</small></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      {% endif %}
 
-          {{ content }}
+      <main id="main">
+        {{ content }}
+      </main>
 
-          <footer>
-            {% include footer-custom.html %}
-          </footer>
-    </section>
+      <footer>
+        {% include footer-custom.html %}
+      </footer>
+    </div>
+
     <script>
             document.querySelectorAll('.faq-question').forEach(button => {
                button.addEventListener('click', () => {
@@ -175,6 +143,38 @@
                });
             });
     </script>
+    <script>
+      (function(){
+        var burger=document.getElementById('clBurger'), nav=document.getElementById('clNav'), header=document.getElementById('clHeader');
+        if(burger&&nav){
+          burger.addEventListener('click',function(){
+            var open=nav.classList.toggle('is-open');
+            burger.setAttribute('aria-expanded',open?'true':'false');
+          });
+          nav.addEventListener('click',function(e){ if(e.target.tagName==='A'){nav.classList.remove('is-open');burger.setAttribute('aria-expanded','false');} });
+          document.addEventListener('keydown',function(e){ if(e.key==='Escape'){nav.classList.remove('is-open');burger.setAttribute('aria-expanded','false');} });
+        }
+        function onScroll(){ if(header) header.classList.toggle('is-scrolled',window.scrollY>8); }
+        onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+        var items=document.querySelectorAll('.cl-reveal');
+        if('IntersectionObserver' in window){
+          var io=new IntersectionObserver(function(es){es.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);} });},{threshold:.12});
+          items.forEach(function(el){io.observe(el);});
+        } else { items.forEach(function(el){el.classList.add('is-in');}); }
+      })();
+    </script>
+    <script>
+  document.querySelectorAll('.cl-video__btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + btn.dataset.yt + '?autoplay=1&rel=0&modestbranding=1';
+      f.title = 'QuoteX demo video';
+      f.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      btn.parentNode.replaceChild(f, btn);
+    });
+  });
+</script>
     <script type='text/javascript'>
       piAId = '1115493';
       piCId = '';
@@ -189,6 +189,6 @@
         if(window.attachEvent) { window.attachEvent('onload', async_load); }
         else { window.addEventListener('load', async_load, false); }
       })();
-      </script>
+    </script>
   </body>
 </html>

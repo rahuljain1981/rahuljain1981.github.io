@@ -11,145 +11,253 @@ keywords: Simple User Journey Map Builder, Salesforce, Codeylabs, customer journ
 
 
 
-<main class="cd-padding">
+<style id="cl-product-page-styles">
+/* Self-contained styles for CodeyLabs product pages (relies on base styles.css for variables, header, footer and .cl-btn) */
+[hidden]{display:none!important}
+.cl-arrow{display:inline-block;margin-left:6px;transition:transform .2s}
+.cl-btn:hover .cl-arrow,a:hover>.cl-arrow{transform:translateX(4px)}
+.cl-section--tight{padding:56px 0}
 
-    <section class="product-section">
-        <h2 class="page-header">Simple User Journey Map Builder</h2>
-        <h4 class="subheader">Visualize and optimize customer journeys with the Simple User Journey Map Builder</h4>
+/* hero */
+.cl-phero{padding:56px 0 64px;text-align:center;background:radial-gradient(800px 360px at 85% -25%,rgba(255,206,49,.38),transparent 60%),radial-gradient(640px 320px at 0% 0%,rgba(13,157,218,.16),transparent 60%),linear-gradient(180deg,#fff 0%,var(--cl-soft) 100%);border-bottom:1px solid var(--cl-line)}
+.cl-crumb{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--cl-muted);margin-bottom:22px}
+.cl-crumb a{color:var(--cl-blue-d)!important}
+.cl-crumb a:hover{text-decoration:underline!important}
+.cl-crumb span[aria-hidden]{opacity:.5}
+.cl-phero .cl-pill-sm{display:inline-block;font-size:13px;font-weight:700;color:var(--cl-blue-d);background:rgba(13,157,218,.1);border:1px solid rgba(13,157,218,.25);padding:6px 14px;border-radius:999px;margin-bottom:18px}
+.cl-phero h1{font-size:clamp(32px,4.8vw,56px);line-height:1.08;letter-spacing:-.025em;font-weight:800;color:var(--cl-ink);margin:0 auto 16px;max-width:920px}
+.cl-phero__sub{font-size:clamp(17px,2vw,20px);color:var(--cl-muted);max-width:760px;margin:0 auto 30px}
+.cl-phero__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
 
-      <div class="product-grid product-showcase-page">
+/* overview + gallery */
+.cl-overview{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.cl-overview__copy p{font-size:17.5px;line-height:1.75;margin:0 0 18px}
+.cl-overview__copy p:first-child{font-size:20px;line-height:1.6;color:var(--cl-ink);font-weight:500}
+.cl-overview__copy b,.cl-overview__copy strong{color:var(--cl-ink)}
+.cl-overview__copy p:last-child{margin-bottom:0}
+.cl-gal{background:#fff;border:1px solid var(--cl-line);border-radius:28px;padding:14px;box-shadow:var(--cl-shadow-lg);min-width:0}
+.cl-gal__stage{position:relative;aspect-ratio:16/10;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,var(--cl-yellow-l),#E8F6FD)}
+.cl-gal__stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity .25s}
+.cl-gal__stage img.is-fading{opacity:0}
+.cl-gal__nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.92);box-shadow:0 4px 14px rgba(11,18,32,.2);display:grid;place-items:center;cursor:pointer;color:var(--cl-ink);transition:transform .2s,background .2s;z-index:2}
+.cl-gal__nav:hover{background:var(--cl-yellow);transform:translateY(-50%) scale(1.08)}
+.cl-gal__nav svg{width:22px;height:22px}
+.cl-gal__nav--prev{left:12px}.cl-gal__nav--next{right:12px}
+.cl-gal__count{position:absolute;right:12px;bottom:12px;z-index:2;font-size:12.5px;font-weight:700;color:#fff;background:rgba(11,18,32,.7);padding:5px 12px;border-radius:999px}
+.cl-gal__thumbs{display:flex;gap:10px;overflow-x:auto;padding:12px 2px 2px;scrollbar-width:thin}
+.cl-gal__thumb{flex:none;width:92px;aspect-ratio:16/10;padding:0;border:2px solid transparent;border-radius:10px;overflow:hidden;background:var(--cl-soft);cursor:pointer;opacity:.6;transition:opacity .2s,border-color .2s,transform .2s}
+.cl-gal__thumb:hover{opacity:1;transform:translateY(-2px)}
+.cl-gal__thumb.is-active{opacity:1;border-color:var(--cl-yellow-d)}
+.cl-gal__thumb img{width:100%;height:100%;object-fit:cover}
+.cl-gal--single .cl-gal__nav,.cl-gal--single .cl-gal__count,.cl-gal--single .cl-gal__thumbs{display:none}
 
-      <div class="table">
-         <div class="table-row">
-            
-            <div data-clientid="DivjMGy" class="col1">
-               <span id="Spant8Mg" data-clientid="Spant8Mg" data-displayname="Text" class="react-grid-item">
-                  <p>
-                     A "Simple User Journey Map Builder" built on the Salesforce platform offers a user-friendly interface for designing, visualizing, and managing customer journeys. 
-<br/>
-                     It empowers businesses to create compelling and personalized customer experiences by visually designing, managing, and optimizing customer journeys within the Salesforce ecosystem.
-                  </p>
-               </span>
-            </div>
-            <div class="col2">
-               <main>
-                  <div id="productCarousel" class="carousel slide" data-ride="carousel">
-                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                           <img src="/assets/img/SUJMP/0jmb.png" class="d-block w-100" alt="Product 1">
-                           
-                         </div>
-                        <div class="carousel-item">
-                          <img src="/assets/img/SUJMP/1.png" class="d-block w-100" alt="Product 1">
-                          
-                        </div>
-                        <div class="carousel-item">
-                           <img src="/assets/img/SUJMP/2.png" class="d-block w-100" alt="Product 1">
-                           
-                         </div>
-                         <div class="carousel-item">
-                           <img src="/assets/img/SUJMP/3.png" class="d-block w-100" alt="Product 2">
-                           <div class="carousel-caption d-none d-md-block">
-                              
-                           </div>
-                        </div>
-                        <div class="carousel-item">
-                           <img src="/assets/img/SUJMP/4.png" class="d-block w-100" alt="Product 2">
-                           <div class="carousel-caption d-none d-md-block">
-                              
-                           </div>
-                        </div>
-                        <div class="carousel-item">
-                           <img src="/assets/img/SUJMP/5.png" class="d-block w-100" alt="Product 2">
-                           <div class="carousel-caption d-none d-md-block">
-                              
-                           </div>
-                        </div>
-                        <div class="carousel-item">
-                           <img src="/assets/img/SUJMP/6.png" class="d-block w-100" alt="Product 2">
-                           <div class="carousel-caption d-none d-md-block">
-                              
-                           </div>
-                        </div>
-                        <div class="carousel-item">
-                           <img src="/assets/img/SUJMP/7.png" class="d-block w-100" alt="Product 2">
-                           <div class="carousel-caption d-none d-md-block">
-                              
-                           </div>
-                        </div>
-                        <div class="carousel-item">
-                           <img src="/assets/img/SUJMP/8.png" class="d-block w-100" alt="Product 2">
-                           <div class="carousel-caption d-none d-md-block">
-                              
-                           </div>
-                        </div>
-                       
-                        <!-- Add more carousel items as needed -->
-                     </div>
-                     <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
-                     <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
-                     <span class="sr-only">Previous</span>
-                     </a>
-                     <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
-                     <span class="carousel-control-next-icon" aria-hidden="true" ></span>
-                     <span class="sr-only">Next</span>
-                     </a>
-                  </div>
-               </main>
-            </div>
-         </div>
+/* highlight cards */
+.cl-hl{display:flex;flex-wrap:wrap;justify-content:center;gap:24px}
+.cl-hl__card{position:relative;flex:1 1 300px;max-width:380px;background:#fff;border:1px solid var(--cl-line);border-radius:24px;padding:30px 28px 30px;overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s}
+.cl-hl__card::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--cl-yellow),var(--cl-blue));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.cl-hl__card:hover{transform:translateY(-6px);box-shadow:var(--cl-shadow-lg);border-color:transparent}
+.cl-hl__card:hover::before{transform:scaleX(1)}
+.cl-hl__num{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--cl-yellow-l);color:var(--cl-ink);font-weight:800;font-size:16px;margin-bottom:18px}
+.cl-hl__card h3{font-size:19px;line-height:1.3;font-weight:800;color:var(--cl-ink);margin:0 0 10px;letter-spacing:-.01em}
+.cl-hl__card p{margin:0;font-size:15.5px;line-height:1.7}
+.cl-hl__card .cl-ticks{margin-top:2px}
+.cl-hl__card .cl-ticks li{font-size:15.5px}
+.cl-ticks{list-style:none;margin:0;padding:0}
+.cl-ticks li{position:relative;padding-left:28px;margin-bottom:10px;line-height:1.6}
+.cl-ticks li:last-child{margin-bottom:0}
+.cl-ticks li::before{content:"";position:absolute;left:0;top:5px;width:16px;height:16px;border-radius:50%;background:var(--cl-yellow-l) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B1220' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/10px no-repeat}
+.cl-section--dark .cl-hl__card{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.14)}
+.cl-section--dark .cl-hl__card h3{color:#fff}
+.cl-section--dark .cl-hl__card p,.cl-section--dark .cl-hl__card li{color:#CBD5E1}
+.cl-section--dark .cl-hl__num{background:rgba(255,206,49,.16);color:var(--cl-yellow)}
+.cl-section--dark .cl-hl__card:hover{background:rgba(255,255,255,.09)}
+
+/* videos */
+.cl-vids{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:28px;max-width:1000px;margin:0 auto}
+.cl-vids--one{grid-template-columns:minmax(0,1fr);max-width:860px}
+.cl-video{position:relative;width:100%;aspect-ratio:16/9;border-radius:24px;overflow:hidden;border:6px solid #fff;box-shadow:var(--cl-shadow-lg);background:#000}
+.cl-video__btn{display:block;width:100%;height:100%;padding:0;border:0;background:#000;cursor:pointer;position:relative;color:#fff}
+.cl-video__btn img{width:100%;height:100%;object-fit:cover;transition:transform .5s,opacity .3s}
+.cl-video__btn:hover img{transform:scale(1.04);opacity:.85}
+.cl-video__btn::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,18,32,0) 40%,rgba(11,18,32,.5))}
+.cl-video__btn--list{background:linear-gradient(135deg,#0F1B2D 0%,#1c3358 55%,#0D9DDA 160%)}
+.cl-video__btn--list::after{display:none}
+.cl-video__label{position:absolute;left:0;right:0;bottom:22px;text-align:center;z-index:2;font-weight:700;font-size:16px;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+.cl-video__play{position:absolute;z-index:2;left:50%;top:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:var(--cl-yellow);color:var(--cl-ink);display:grid;place-items:center;animation:clPulse 2.2s infinite;transition:transform .2s}
+.cl-video__btn:hover .cl-video__play{transform:scale(1.1)}
+.cl-video__play svg{width:38px;height:38px;margin-left:5px}
+.cl-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@keyframes clPulse{0%{box-shadow:0 0 0 0 rgba(255,206,49,.55)}70%{box-shadow:0 0 0 24px rgba(255,206,49,0)}100%{box-shadow:0 0 0 0 rgba(255,206,49,0)}}
+
+/* faq */
+.cl-faq{max-width:860px;margin:0 auto;display:grid;gap:14px}
+.cl-faq details{background:#fff;border:1px solid var(--cl-line);border-radius:18px;transition:box-shadow .2s,border-color .2s}
+.cl-faq details[open]{border-color:var(--cl-yellow-d);box-shadow:var(--cl-shadow-md)}
+.cl-faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 26px;font-weight:700;font-size:17.5px;color:var(--cl-ink)}
+.cl-faq summary::-webkit-details-marker{display:none}
+.cl-faq summary::after{content:"+";flex:none;width:32px;height:32px;border-radius:50%;background:var(--cl-yellow-l);display:grid;place-items:center;font-size:22px;font-weight:600;line-height:1;transition:transform .25s,background .2s}
+.cl-faq details[open] summary::after{content:"\2212";background:var(--cl-yellow)}
+.cl-faq__a{padding:0 26px 24px;color:var(--cl-text)}
+.cl-faq__a p{margin:0}
+
+/* related + cta */
+.cl-related{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cl-rel{display:block;background:#fff;border:1px solid var(--cl-line);border-radius:20px;padding:24px 26px;transition:transform .25s,box-shadow .25s}
+.cl-rel:hover{transform:translateY(-5px);box-shadow:var(--cl-shadow-md)}
+.cl-rel b{display:block;font-size:18px;color:var(--cl-ink);margin-bottom:6px}
+.cl-rel span{display:block;font-size:15px;color:var(--cl-muted);margin-bottom:12px}
+.cl-rel em{font-style:normal;font-weight:700;color:var(--cl-blue-d)}
+.cl-pcta{display:flex;align-items:center;justify-content:space-between;gap:32px;border-radius:32px;padding:46px 52px;background:linear-gradient(135deg,var(--cl-yellow),#FFE07A)}
+.cl-pcta h2{font-size:clamp(24px,3vw,34px);font-weight:800;color:var(--cl-ink);margin:0 0 6px;letter-spacing:-.015em}
+.cl-pcta p{margin:0;color:var(--cl-ink);max-width:560px}
+.cl-pcta__actions{display:flex;flex-wrap:wrap;gap:12px}
+
+@media (max-width:960px){
+  .cl-overview{grid-template-columns:1fr;gap:36px}
+  .cl-related{grid-template-columns:1fr}
+  .cl-pcta{flex-direction:column;align-items:flex-start;padding:34px 26px}
+}
+@media (max-width:600px){
+  .cl-phero{padding:40px 0 48px}
+  .cl-gal{padding:10px;border-radius:22px}
+  .cl-gal__thumb{width:72px}
+  .cl-gal__nav{width:38px;height:38px}
+  .cl-video__play{width:64px;height:64px;margin:-32px 0 0 -32px}
+  .cl-video__play svg{width:28px;height:28px}
+  .cl-faq summary{padding:18px 18px;font-size:16.5px}.cl-faq__a{padding:0 18px 20px}
+}
+@media (prefers-reduced-motion:reduce){.cl-video__play{animation:none}.cl-gal__stage img,.cl-hl__card,.cl-rel{transition:none}}
+.cl-reveal{transition-delay:var(--d,0ms)}
+
+/* Video frames: unique class names + !important so no other stylesheet can collapse them */
+.cl-vids{display:block!important;width:100%!important;max-width:860px!important;margin:0 auto!important}
+.cl-vframe{position:relative!important;display:block!important;width:100%!important;height:0!important;padding:0 0 56.25% 0!important;margin:0 0 32px 0!important;border:0!important;border-radius:20px!important;overflow:hidden!important;background:#000!important;box-shadow:0 0 0 6px #fff,0 24px 60px rgba(0,0,0,.35)!important;aspect-ratio:auto!important}
+.cl-vids .cl-vframe:last-child{margin-bottom:0!important}
+.cl-vframe iframe{position:absolute!important;top:0!important;left:0!important;width:100%!important;height:100%!important;border:0!important;display:block!important;visibility:visible!important;opacity:1!important}
+</style>
+<section class="cl-phero" aria-labelledby="pTitle">
+  <div class="cl-container">
+    <nav class="cl-crumb" aria-label="Breadcrumb"><a href="/ourproducts.html">Products</a><span aria-hidden="true">/</span><span>Simple User Journey Map Builder</span></nav><br>
+    <span class="cl-pill-sm">Experience &amp; UI</span>
+    <h1 id="pTitle">Simple User Journey Map Builder</h1>
+    <p class="cl-phero__sub">Visualize and optimize customer journeys with the Simple User Journey Map Builder</p>
+    <div class="cl-phero__actions">
+      <a class="cl-btn cl-btn--primary" href="#demo">Watch the demo<span class="cl-arrow" aria-hidden="true">&rarr;</span></a>
+      <a class="cl-btn cl-btn--ghost" href="/meetceo.html">Book a Scoping Audit</a>
+    </div>
+  </div>
+</section>
+<section class="cl-section" aria-label="Overview">
+  <div class="cl-container cl-overview">
+    <div class="cl-overview__copy cl-reveal">
+      <p>A "Simple User Journey Map Builder" built on the Salesforce platform offers a user-friendly interface for designing, visualizing, and managing customer journeys.</p>
+      <p>It empowers businesses to create compelling and personalized customer experiences by visually designing, managing, and optimizing customer journeys within the Salesforce ecosystem.</p>
+    </div>
+    <div class="cl-gal cl-reveal" role="group" aria-roledescription="gallery" aria-label="Simple User Journey Map Builder screenshots" tabindex="0">
+      <div class="cl-gal__stage">
+        <img src="/assets/img/SUJMP/0jmb.png" alt="Simple User Journey Map Builder screenshot 1" width="1280" height="800">
+        <button type="button" class="cl-gal__nav cl-gal__nav--prev" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button type="button" class="cl-gal__nav cl-gal__nav--next" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+        <span class="cl-gal__count" aria-live="polite">1 / 9</span>
       </div>
-      <span id="SpaneuAl" data-clientid="SpaneuAl" data-displayname="Text" class="react-grid-item ltr  false   " >
-         <p>Key Highlights</p>
-      </span>
-      
-         
-         <div class="myhighlights" data-type="grid-layout" id="Divf9nZ" data-clientid="Divf9nZ" data-displayname="Flex - Horizontal">
-             <div id="Divwk85" data-clientid="Divwk85" data-displayname="Flex - Horizontal">
-                 <span id="Spanrh5g" data-clientid="Spanrh5g" data-displayname="Text" class="keyhighlights">
-                    
-                     <p class="keyhighlights-title">Visual Journey Mapping</p>
-               <p class="keyhighlights-content">The builder offers a visual representation of the customer journey, with each stage represented by a node or block. Users can define various touchpoints, actions, and decision points within each stage.</p>
-                 </span>
-             </div>
-             <div id="Divwk85" data-clientid="Divwk85" data-displayname="Flex - Horizontal">
-                 <span id="Spanrh5g" data-clientid="Spanrh5g" data-displayname="Text" class="keyhighlights">
-                  <p class="keyhighlights-title">Integration with Salesforce Data</p>
-               <p class="keyhighlights-content">The builder seamlessly integrates with in Salesforce. Utilizing the power of salesforce platform. Allowing to have journey map data with other user related data at one place.</p>
-                 </span>
-             </div>
-             <div id="Divwk85" data-clientid="Divwk85" data-displayname="Flex - Horizontal">
-                 <span id="Spanrh5g" data-clientid="Spanrh5g" data-displayname="Text" class="keyhighlights">
-                  <p class="keyhighlights-title">Analytics and Scalability</p>
-               <p class="keyhighlights-content">The salesforce platform provides analytics and reporting capabilities to track the performance of customer journeys. Scale this solution with other areas of your business.</p>
-                 </span>
-             </div>
-             <div id="Divwk85" data-clientid="Divwk85" data-displayname="Flex - Horizontal">
-                 <span id="Spanrh5g" data-clientid="Spanrh5g" data-displayname="Text" class="keyhighlights">
-                  <p class="keyhighlights-title">Security and Compliance</p>
-               <p class="keyhighlights-content">Built on the Salesforce platform, the User Journey Map Builder adheres to industry-leading security standards and compliance regulations. It ensures the confidentiality, integrity, and availability of customer data throughout.</p>
-                 </span>
-             </div>
+      <div class="cl-gal__thumbs"><button type="button" class="cl-gal__thumb is-active" data-full="/assets/img/SUJMP/0jmb.png" data-alt="Simple User Journey Map Builder screenshot 1" aria-label="Show screenshot 1"><img src="/assets/img/SUJMP/0jmb.png" alt="" loading="lazy" onerror="this.parentNode.remove()"></button><button type="button" class="cl-gal__thumb" data-full="/assets/img/SUJMP/1.png" data-alt="Simple User Journey Map Builder screenshot 2" aria-label="Show screenshot 2"><img src="/assets/img/SUJMP/1.png" alt="" loading="lazy" onerror="this.parentNode.remove()"></button><button type="button" class="cl-gal__thumb" data-full="/assets/img/SUJMP/2.png" data-alt="Simple User Journey Map Builder screenshot 3" aria-label="Show screenshot 3"><img src="/assets/img/SUJMP/2.png" alt="" loading="lazy" onerror="this.parentNode.remove()"></button><button type="button" class="cl-gal__thumb" data-full="/assets/img/SUJMP/3.png" data-alt="Simple User Journey Map Builder screenshot 4" aria-label="Show screenshot 4"><img src="/assets/img/SUJMP/3.png" alt="" loading="lazy" onerror="this.parentNode.remove()"></button><button type="button" class="cl-gal__thumb" data-full="/assets/img/SUJMP/4.png" data-alt="Simple User Journey Map Builder screenshot 5" aria-label="Show screenshot 5"><img src="/assets/img/SUJMP/4.png" alt="" loading="lazy" onerror="this.parentNode.remove()"></button><button type="button" class="cl-gal__thumb" data-full="/assets/img/SUJMP/5.png" data-alt="Simple User Journey Map Builder screenshot 6" aria-label="Show screenshot 6"><img src="/assets/img/SUJMP/5.png" alt="" loading="lazy" onerror="this.parentNode.remove()"></button><button type="button" class="cl-gal__thumb" data-full="/assets/img/SUJMP/6.png" data-alt="Simple User Journey Map Builder screenshot 7" aria-label="Show screenshot 7"><img src="/assets/img/SUJMP/6.png" alt="" loading="lazy" onerror="this.parentNode.remove()"></button><button type="button" class="cl-gal__thumb" data-full="/assets/img/SUJMP/7.png" data-alt="Simple User Journey Map Builder screenshot 8" aria-label="Show screenshot 8"><img src="/assets/img/SUJMP/7.png" alt="" loading="lazy" onerror="this.parentNode.remove()"></button><button type="button" class="cl-gal__thumb" data-full="/assets/img/SUJMP/8.png" data-alt="Simple User Journey Map Builder screenshot 9" aria-label="Show screenshot 9"><img src="/assets/img/SUJMP/8.png" alt="" loading="lazy" onerror="this.parentNode.remove()"></button></div>
+    </div>
+  </div>
+</section>
+<section class="cl-section cl-section--soft" aria-labelledby="hl1">
+  <div class="cl-container">
+    <div class="cl-head cl-head--center cl-reveal">
+      <span class="cl-eyebrow">Highlights</span>
+      <h2 class="cl-h2" id="hl1">Key Highlights</h2>
+    </div>
+    <div class="cl-hl">
+      <article class="cl-hl__card cl-reveal" style="--d:0ms">
+        <div class="cl-hl__num" aria-hidden="true">01</div>
+        <h3>Visual Journey Mapping</h3>
+        <p>The builder offers a visual representation of the customer journey, with each stage represented by a node or block. Users can define various touchpoints, actions, and decision points within each stage.</p>
+      </article>
+      <article class="cl-hl__card cl-reveal" style="--d:70ms">
+        <div class="cl-hl__num" aria-hidden="true">02</div>
+        <h3>Integration with Salesforce Data</h3>
+        <p>The builder seamlessly integrates with in Salesforce. Utilizing the power of salesforce platform. Allowing to have journey map data with other user related data at one place.</p>
+      </article>
+      <article class="cl-hl__card cl-reveal" style="--d:140ms">
+        <div class="cl-hl__num" aria-hidden="true">03</div>
+        <h3>Analytics and Scalability</h3>
+        <p>The salesforce platform provides analytics and reporting capabilities to track the performance of customer journeys. Scale this solution with other areas of your business.</p>
+      </article>
+      <article class="cl-hl__card cl-reveal" style="--d:0ms">
+        <div class="cl-hl__num" aria-hidden="true">04</div>
+        <h3>Security and Compliance</h3>
+        <p>Built on the Salesforce platform, the User Journey Map Builder adheres to industry-leading security standards and compliance regulations. It ensures the confidentiality, integrity, and availability of customer data throughout.</p>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="cl-section cl-section--dark" id="demo" aria-labelledby="vd1">
+  <div class="cl-container">
+    <div class="cl-head cl-head--center cl-reveal">
+      <span class="cl-eyebrow" style="color:var(--cl-yellow)">Demos</span>
+      <h2 class="cl-h2" id="vd1">Watch Our Demos</h2>
+    </div>
+    <div class="cl-vids cl-vids--one">
+      <div class="cl-vframe"><iframe src="https://www.youtube.com/embed/XgUKpOCVjmk" title="Simple User Journey Map Builder demo video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    </div>
+  </div>
+</section>
+<section class="cl-section" aria-labelledby="relT">
+  <div class="cl-container">
+    <div class="cl-head cl-head--center cl-reveal">
+      <span class="cl-eyebrow">Explore more</span>
+      <h2 class="cl-h2" id="relT">More from CodeyLabs</h2>
+    </div>
+    <div class="cl-related">
+      <a class="cl-rel cl-reveal" href="/crc.html"><b>Custom Lightning Report Chart</b><span>Get the insights you need, when you need them.</span><em>Learn more<span class="cl-arrow" aria-hidden="true">&rarr;</span></em></a>
+      <a class="cl-rel cl-reveal" href="/homecarouselbanner.html"><b>Home Carousel Banner</b><span>Elevate your notifications, empower your team.</span><em>Learn more<span class="cl-arrow" aria-hidden="true">&rarr;</span></em></a>
+      <a class="cl-rel cl-reveal" href="/agentforceforpresales.html"><b>Agentforce for Pre-Sales</b><span>AI-powered pre-sales automation for faster, smarter deals.</span><em>Learn more<span class="cl-arrow" aria-hidden="true">&rarr;</span></em></a>
+    </div>
+  </div>
+</section>
 
-             
-         </div>
+<section class="cl-section cl-section--tight" aria-labelledby="ctaT">
+  <div class="cl-container">
+    <div class="cl-pcta cl-reveal">
+      <div>
+        <h2 id="ctaT">Want to see Simple User Journey Map Builder in your org?</h2>
+        <p>Book a scoping audit and our Salesforce experts will walk you through it.</p>
+      </div>
+      <div class="cl-pcta__actions">
+        <a class="cl-btn cl-btn--dark" href="/meetceo.html">Book a Scoping Audit</a>
+        <a class="cl-btn cl-btn--ghost" href="/ourproducts.html">All products</a>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  (function(){
+    document.querySelectorAll('.cl-reveal').forEach(function(el){el.classList.add('is-in');});
 
+    /* gallery */
+    document.querySelectorAll('.cl-gal').forEach(function(g){
+      var stage=g.querySelector('.cl-gal__stage img'), thumbs=[].slice.call(g.querySelectorAll('.cl-gal__thumb')), count=g.querySelector('.cl-gal__count'), i=0, touchX=null;
+      function show(n){
+        if(!thumbs.length) return;
+        i=(n+thumbs.length)%thumbs.length;
+        var t=thumbs[i], src=t.getAttribute('data-full');
+        stage.classList.add('is-fading');
+        setTimeout(function(){ stage.src=src; stage.alt=t.getAttribute('data-alt'); stage.classList.remove('is-fading'); },120);
+        thumbs.forEach(function(b,k){b.classList.toggle('is-active',k===i); b.setAttribute('aria-current',k===i?'true':'false');});
+        if(count) count.textContent=(i+1)+' / '+thumbs.length;
+        t.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'});
+      }
+      thumbs.forEach(function(b,k){b.addEventListener('click',function(){show(k);});});
+      var p=g.querySelector('.cl-gal__nav--prev'), n=g.querySelector('.cl-gal__nav--next');
+      if(p) p.addEventListener('click',function(){show(i-1);});
+      if(n) n.addEventListener('click',function(){show(i+1);});
+      g.addEventListener('keydown',function(e){ if(e.key==='ArrowLeft'){show(i-1);} if(e.key==='ArrowRight'){show(i+1);} });
+      g.addEventListener('touchstart',function(e){touchX=e.touches[0].clientX;},{passive:true});
+      g.addEventListener('touchend',function(e){ if(touchX===null) return; var dx=e.changedTouches[0].clientX-touchX; if(Math.abs(dx)>40){show(dx<0?i+1:i-1);} touchX=null; });
+    });
 
-      <br/>
-      <br/>
-      <span id="SpaneuAl" data-clientid="SpaneuAl" data-displayname="Text" class="react-grid-item ltr  false   " >
-         <p>Watch Our Demos</p>
-      </span>
-     
-      <div class="videocontainer">
-         <div class="iframevideo">
-             <iframe width="100%" height="315" src="https://www.youtube.com/embed/XgUKpOCVjmk" frameborder="0" allowfullscreen></iframe>
-         </div>
-     </div>
-      <br/>
-      <br/>
-      
-</div>
-  
-   </section>
-</main>  
+      })();
+</script>

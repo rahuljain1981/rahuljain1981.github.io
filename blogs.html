@@ -8,109 +8,223 @@ ogdescription: Read our blog posts on the Salesforce ecosystem, digital transfor
 keywords: Codeylabs, blog, Salesforce, digital transformation, innovation, insights, technology, automotive cloud, IT industry, professional services, revenue slippage, articles 
 ---
 
+<style id="cl-blog-styles">
+/* Self-contained styles for the Blogs page (uses variables from the base styles.css) */
+[hidden]{display:none!important}
+.cl-section--tight{padding:64px 0 24px}
+.cl-pagehero{padding:72px 0 56px;text-align:center;background:radial-gradient(700px 320px at 85% -20%,rgba(255,206,49,.35),transparent 60%),radial-gradient(600px 300px at 0% 0%,rgba(13,157,218,.14),transparent 60%),linear-gradient(180deg,#fff 0%,var(--cl-soft) 100%);border-bottom:1px solid var(--cl-line)}
+.cl-pagehero h1{font-size:clamp(32px,4.6vw,54px);line-height:1.1;letter-spacing:-.02em;font-weight:800;color:var(--cl-ink);margin:0 auto 14px;max-width:900px}
+.cl-pagehero p{font-size:18px;color:var(--cl-muted);max-width:720px;margin:0 auto}
+.cl-arrow{display:inline-block;margin-left:6px;transition:transform .2s}
+a:hover>.cl-arrow,.cl-btn:hover .cl-arrow{transform:translateX(4px)}
+.cl-flag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.cl-flag--solid{background:var(--cl-ink);color:var(--cl-yellow)}
 
+.cl-tag{font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:999px;background:var(--cl-soft);color:var(--cl-text);border:1px solid var(--cl-line)}
+.cl-tag--quotex{background:var(--cl-yellow-l);color:#7a5a00;border-color:#FFE7A1}
+.cl-tag--industry{background:rgba(13,157,218,.1);color:var(--cl-blue-d);border-color:rgba(13,157,218,.25)}
+.cl-tag--auto{background:#EEF1FF;color:#3b4bd1;border-color:#D7DCFF}
+.cl-read{font-size:13.5px;color:var(--cl-muted);font-weight:500}
+.cl-bcard__meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:14px}
 
-<main class="cd-padding">
+.cl-cover--quotex{background:linear-gradient(135deg,#FFE07A 0%,#FFCE31 45%,#F2B705 100%)}
+.cl-cover--industry{background:linear-gradient(135deg,#0D9DDA 0%,#2E6BFF 100%)}
+.cl-cover--auto{background:linear-gradient(135deg,#6366F1 0%,#0D9DDA 100%)}
+.cl-cover__icon{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:18px;background:rgba(255,255,255,.88);display:grid;place-items:center;color:var(--cl-ink);box-shadow:0 8px 24px rgba(11,18,32,.18);transition:transform .3s}
+.cl-cover__icon svg{width:30px;height:30px}
+.has-img .cl-cover__icon{display:none}
+.has-img.is-empty .cl-cover__icon{display:grid}
 
-    <section class="product-section">
-        <h2 class="page-header">Codeylabs Blogs</h2>
+.cl-bfeature{display:grid;grid-template-columns:1.1fr 1fr;background:#fff;border:1px solid var(--cl-line);border-radius:32px;overflow:hidden;box-shadow:var(--cl-shadow-md)}
+.cl-bfeature__cover{position:relative;display:block;min-height:340px;overflow:hidden}
+.cl-bfeature__cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.cl-bfeature:hover .cl-bfeature__cover img{transform:scale(1.05)}
+.cl-bfeature__body{padding:48px 44px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.cl-bfeature h2{font-size:clamp(26px,3vw,38px);line-height:1.15;letter-spacing:-.02em;font-weight:800;margin:0 0 14px}
+.cl-bfeature h2 a{color:var(--cl-ink)}
+.cl-bfeature h2 a:hover{color:var(--cl-blue-d)}
+.cl-bfeature p{font-size:17px;margin:0 0 26px}
 
-        <div class="product-grid">
+.cl-filters{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:0 0 40px}
+.cl-chip{font:600 15px var(--cl-font);color:var(--cl-text);background:#fff;border:1.5px solid var(--cl-line);border-radius:999px;padding:10px 20px;cursor:pointer;transition:all .2s}
+.cl-chip:hover{border-color:var(--cl-ink);color:var(--cl-ink)}
+.cl-chip.is-active{background:var(--cl-ink);border-color:var(--cl-ink);color:#fff}
 
-            <div class="product-column">
-                <article class="product-card">
-                    <div class="product-card__container">
-                        <h3 class="product-card__heading">Accelerating Sales Success with QuoteX</h3>
+.cl-bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.cl-bcard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--cl-line);border-radius:24px;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.cl-bcard:hover{transform:translateY(-6px);box-shadow:var(--cl-shadow-lg);border-color:transparent}
+.cl-bcard__cover{position:relative;display:block;aspect-ratio:16/9;overflow:hidden}
+.cl-bcard__cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.cl-bcard:hover .cl-bcard__cover img{transform:scale(1.06)}
+.cl-bcard:hover .cl-cover__icon{transform:scale(1.1) rotate(-4deg)}
+.cl-bcard__body{display:flex;flex-direction:column;flex:1;padding:24px 26px 28px}
+.cl-bcard h3{font-size:20px;line-height:1.3;font-weight:800;letter-spacing:-.01em;margin:0 0 10px}
+.cl-bcard h3 a{color:var(--cl-ink)}
+.cl-bcard h3 a:hover{color:var(--cl-blue-d)}
+.cl-bcard p{flex:1;margin:0 0 20px;font-size:15.5px;color:var(--cl-text);display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.cl-readmore{font-weight:700;color:var(--cl-blue-d)!important;align-self:flex-start}
+.cl-bcard[hidden]{display:none!important}
+.cl-empty{text-align:center;color:var(--cl-muted);margin-top:30px}
 
-                        <p>Discover how QuoteX revolutionizes the presales process by streamlining proposal creation, ensuring pricing accuracy, accelerating deal cycles, and empowering sales teams to win more business.</p>
-                        <p></p>
-                        <a href="blogquotexpresalessuccess.html" class="product-card__link">Read More</a>
-                    </div>
-                </article>
-            </div>  
+.cl-bcta{display:flex;align-items:center;justify-content:space-between;gap:32px;border-radius:32px;padding:44px 52px;background:linear-gradient(135deg,var(--cl-yellow),#FFE07A)}
+.cl-bcta h2{font-size:clamp(24px,3vw,34px);font-weight:800;color:var(--cl-ink);margin:0 0 6px;letter-spacing:-.015em}
+.cl-bcta p{margin:0;color:var(--cl-ink);max-width:560px}
 
+@media (max-width:1000px){.cl-bgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:900px){
+  .cl-bfeature{grid-template-columns:1fr}
+  .cl-bfeature__cover{min-height:240px}
+  .cl-bfeature__body{padding:30px 24px 34px}
+  .cl-bcta{flex-direction:column;align-items:flex-start;padding:34px 26px}
+}
+@media (max-width:640px){
+  .cl-bgrid{grid-template-columns:1fr}
+  .cl-filters{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding-bottom:8px;margin-inline:-18px;padding-inline:18px;scrollbar-width:none}
+  .cl-chip{white-space:nowrap}
+}
+@media (prefers-reduced-motion:reduce){.cl-bcard,.cl-bcard img,.cl-bfeature img{transition:none}}
+.cl-reveal{transition-delay:var(--d,0ms)}
+</style>
 
-            <div class="product-column">
-                <article class="product-card">
-                    <div class="product-card__container">
-                        <h3 class="product-card__heading">Streamlining Vehicle Health Reports</h3>
-                       
-                        <p>Explore how automation in Salesforce Automotive Cloud enhances vehicle health reporting and service efficiency.</p>
-                        <p></p>
-                        <a href="blogvhr.html" class="product-card__link">Read More</a>
-                    </div>
-                </article>
-            </div>
+<section class="cl-pagehero">
+  <div class="cl-container">
+    <h1>Codeylabs Blogs</h1>
+    <p>Insights on Salesforce, professional services and digital transformation.</p>
+  </div>
+</section>
 
-            
-            <div class="product-column">
-                <article class="product-card">
-                    <div class="product-card__container">
-                        <h3 class="product-card__heading">The Evolution of India's IT Industry</h3>
-                       
-                        <p>From Labor Arbitrage to Technology Arbitrage.</p>
-                        <p></p>
-                        <a href="blogtechnologyarbitrage.html" class="product-card__link">Read More</a>
-                    </div>
-                </article>
-            </div>
+<section class="cl-section cl-section--tight" aria-labelledby="featTitle">
+  <div class="cl-container">
+    <article class="cl-bfeature cl-reveal">
+      <a class="cl-bfeature__cover cl-cover--industry has-img" href="/blogrevenueslippage.html" tabindex="-1" aria-hidden="true">
+        <img src="/assets/img/Blogs/revenue-slippage.png" alt="The Silent Margin Killer for Professional Services" loading="lazy" onerror="this.parentNode.classList.add('is-empty');this.remove()">
+        <span class="cl-cover__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span>
+      </a>
+      <div class="cl-bfeature__body">
+        <div class="cl-bcard__meta"><span class="cl-flag cl-flag--solid">Featured</span><span class="cl-tag cl-tag--industry">Industry Insights</span><span class="cl-read">3 min read</span></div>
+        <h2 id="featTitle"><a href="/blogrevenueslippage.html">The Silent Margin Killer for Professional Services</a></h2>
+        <p>Why Revenue Slippage is Costing Your Services Firm More Than You Think and How to Fix It</p>
+        <a class="cl-btn cl-btn--primary" href="/blogrevenueslippage.html">Read the article<span class="cl-arrow" aria-hidden="true">&rarr;</span></a>
+      </div>
+    </article>
+  </div>
+</section>
 
-            <div class="product-column">
-                <article class="product-card">
-                    <div class="product-card__container">
-                        <h3 class="product-card__heading">The Silent Margin Killer for Professional Services</h3>
-                       
-                        <p>Why Revenue Slippage is Costing Your Services Firm More Than You Think and How to Fix It</p>
-                        <p></p>
-                        <a href="blogrevenueslippage.html" class="product-card__link">Read More</a>
-                    </div>
-                </article>
-            </div>
+<section class="cl-section" aria-labelledby="allTitle">
+  <div class="cl-container">
+    <div class="cl-head cl-head--center cl-reveal">
+      <span class="cl-eyebrow">Latest articles</span>
+      <h2 class="cl-h2" id="allTitle">Ideas to quote smarter and deliver better</h2>
+    </div>
 
+    <div class="cl-filters cl-reveal" role="group" aria-label="Filter articles">
+      <button type="button" class="cl-chip is-active" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="cl-chip" data-filter="quotex" aria-pressed="false">QuoteX</button>
+      <button type="button" class="cl-chip" data-filter="industry" aria-pressed="false">Industry Insights</button>
+      <button type="button" class="cl-chip" data-filter="auto" aria-pressed="false">Automotive Cloud</button>
+    </div>
 
-            <div class="product-column">
-                <article class="product-card">
-                    <div class="product-card__container">
-                        <h3 class="product-card__heading">Boosting Project Success with QuoteX</h3>
-
-                        <p>Discover how QuoteX revolutionizes project management by simplifying scope management, eliminating ambiguities, optimizing resources, and streamlining the quoting process for improved efficiency and success.</p>
-                        <p></p>
-                        <a href="blogquotexprojectsuccess.html" class="product-card__link">Read More</a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="product-column">
-                <article class="product-card">
-                    <div class="product-card__container">
-                        <h3 class="product-card__heading">Streamline Project Planning with Automated Timeline Creation</h3>
-
-                        <p>Discover how QuoteX's automated timeline creation feature transforms project planning by saving time, increasing accuracy, and enhancing collaboration through intelligent scope-to-schedule conversion.</p>
-                        <p></p>
-                        <a href="blogautomatedtimeline.html" class="product-card__link">Read More</a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="product-column">
-                <article class="product-card">
-                    <div class="product-card__container">
-                        <h3 class="product-card__heading">Solving Scoping and Quoting Challenges- How QuoteX Revolutionizes Project Management</h3>
-
-                        <p>Discover how QuoteX transforms project management by providing centralized scope repositories, eliminating ambiguities, optimizing resource allocation, and streamlining the entire quoting process for better outcomes.</p>
-                        <p></p>
-                        <a href="blogscopingchallenges.html" class="product-card__link">Read More</a>
-                    </div>
-                </article>
-            </div>
-
-              
-
+    <div class="cl-bgrid" id="clPosts">
+      <article class="cl-bcard cl-reveal" data-topic="quotex" style="--d:0ms">
+        <a class="cl-bcard__cover cl-cover--quotex" href="/blogquotexpresalessuccess.html" tabindex="-1" aria-hidden="true">
+          
+          <span class="cl-cover__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></span>
+        </a>
+        <div class="cl-bcard__body">
+          <div class="cl-bcard__meta"><span class="cl-tag cl-tag--quotex">QuoteX</span><span class="cl-read">3 min read</span></div>
+          <h3><a href="/blogquotexpresalessuccess.html">Accelerating Sales Success with QuoteX</a></h3>
+          <p>Discover how QuoteX revolutionizes the presales process by streamlining proposal creation, ensuring pricing accuracy, accelerating deal cycles, and empowering sales teams to win more business.</p>
+          <a class="cl-readmore" href="/blogquotexpresalessuccess.html">Read More<span class="cl-arrow" aria-hidden="true">&rarr;</span></a>
         </div>
-    </section>
+      </article>
+      <article class="cl-bcard cl-reveal" data-topic="auto" style="--d:70ms">
+        <a class="cl-bcard__cover cl-cover--auto has-img" href="/blogvhr.html" tabindex="-1" aria-hidden="true">
+          <img src="/assets/img/Blogs/blog2.jpeg" alt="Streamlining Vehicle Health Reports" loading="lazy" onerror="this.parentNode.classList.add('is-empty');this.remove()">
+          <span class="cl-cover__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14M6 17l1.5-6h9L18 17"/><circle cx="8" cy="18" r="1.5"/><circle cx="16" cy="18" r="1.5"/><path d="M8 11l1-3h6l1 3"/></svg></span>
+        </a>
+        <div class="cl-bcard__body">
+          <div class="cl-bcard__meta"><span class="cl-tag cl-tag--auto">Automotive Cloud</span><span class="cl-read">3 min read</span></div>
+          <h3><a href="/blogvhr.html">Streamlining Vehicle Health Reports</a></h3>
+          <p>Explore how automation in Salesforce Automotive Cloud enhances vehicle health reporting and service efficiency.</p>
+          <a class="cl-readmore" href="/blogvhr.html">Read More<span class="cl-arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+      <article class="cl-bcard cl-reveal" data-topic="industry" style="--d:140ms">
+        <a class="cl-bcard__cover cl-cover--industry has-img" href="/blogtechnologyarbitrage.html" tabindex="-1" aria-hidden="true">
+          <img src="/assets/img/Blogs/blog1.png" alt="The Evolution of India&#x27;s IT Industry" loading="lazy" onerror="this.parentNode.classList.add('is-empty');this.remove()">
+          <span class="cl-cover__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span>
+        </a>
+        <div class="cl-bcard__body">
+          <div class="cl-bcard__meta"><span class="cl-tag cl-tag--industry">Industry Insights</span><span class="cl-read">3 min read</span></div>
+          <h3><a href="/blogtechnologyarbitrage.html">The Evolution of India's IT Industry</a></h3>
+          <p>From Labor Arbitrage to Technology Arbitrage.</p>
+          <a class="cl-readmore" href="/blogtechnologyarbitrage.html">Read More<span class="cl-arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+      <article class="cl-bcard cl-reveal" data-topic="quotex" style="--d:0ms">
+        <a class="cl-bcard__cover cl-cover--quotex" href="/blogquotexprojectsuccess.html" tabindex="-1" aria-hidden="true">
+          
+          <span class="cl-cover__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></span>
+        </a>
+        <div class="cl-bcard__body">
+          <div class="cl-bcard__meta"><span class="cl-tag cl-tag--quotex">QuoteX</span><span class="cl-read">3 min read</span></div>
+          <h3><a href="/blogquotexprojectsuccess.html">Boosting Project Success with QuoteX</a></h3>
+          <p>Discover how QuoteX revolutionizes project management by simplifying scope management, eliminating ambiguities, optimizing resources, and streamlining the quoting process for improved efficiency and success.</p>
+          <a class="cl-readmore" href="/blogquotexprojectsuccess.html">Read More<span class="cl-arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+      <article class="cl-bcard cl-reveal" data-topic="quotex" style="--d:70ms">
+        <a class="cl-bcard__cover cl-cover--quotex" href="/blogautomatedtimeline.html" tabindex="-1" aria-hidden="true">
+          
+          <span class="cl-cover__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></span>
+        </a>
+        <div class="cl-bcard__body">
+          <div class="cl-bcard__meta"><span class="cl-tag cl-tag--quotex">QuoteX</span><span class="cl-read">3 min read</span></div>
+          <h3><a href="/blogautomatedtimeline.html">Streamline Project Planning with Automated Timeline Creation</a></h3>
+          <p>Discover how QuoteX's automated timeline creation feature transforms project planning by saving time, increasing accuracy, and enhancing collaboration through intelligent scope-to-schedule conversion.</p>
+          <a class="cl-readmore" href="/blogautomatedtimeline.html">Read More<span class="cl-arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+      <article class="cl-bcard cl-reveal" data-topic="quotex" style="--d:140ms">
+        <a class="cl-bcard__cover cl-cover--quotex" href="/blogscopingchallenges.html" tabindex="-1" aria-hidden="true">
+          
+          <span class="cl-cover__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></span>
+        </a>
+        <div class="cl-bcard__body">
+          <div class="cl-bcard__meta"><span class="cl-tag cl-tag--quotex">QuoteX</span><span class="cl-read">4 min read</span></div>
+          <h3><a href="/blogscopingchallenges.html">Solving Scoping and Quoting Challenges- How QuoteX Revolutionizes Project Management</a></h3>
+          <p>Discover how QuoteX transforms project management by providing centralized scope repositories, eliminating ambiguities, optimizing resource allocation, and streamlining the entire quoting process for better outcomes.</p>
+          <a class="cl-readmore" href="/blogscopingchallenges.html">Read More<span class="cl-arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+    </div>
+    <p class="cl-empty" id="clEmpty" hidden>No articles in this category yet.</p>
+  </div>
+</section>
 
-</main>
+<section class="cl-section cl-section--tight" aria-labelledby="blogCta">
+  <div class="cl-container">
+    <div class="cl-bcta cl-reveal">
+      <div>
+        <h2 id="blogCta">Want to see QuoteX in action?</h2>
+        <p>Book a scoping audit and our Salesforce experts will show you how to protect your project margins.</p>
+      </div>
+      <a class="cl-btn cl-btn--dark" href="/meetceo.html">Book a Scoping Audit</a>
+    </div>
+  </div>
+</section>
 
-
-
-
+<script>
+  (function(){
+    document.querySelectorAll('.cl-reveal').forEach(function(el){el.classList.add('is-in');});
+    var chips=document.querySelectorAll('.cl-chip'), cards=document.querySelectorAll('#clPosts .cl-bcard'), empty=document.getElementById('clEmpty');
+    chips.forEach(function(chip){
+      chip.addEventListener('click',function(){
+        var f=chip.dataset.filter, shown=0;
+        chips.forEach(function(c){var on=c===chip;c.classList.toggle('is-active',on);c.setAttribute('aria-pressed',on?'true':'false');});
+        cards.forEach(function(card){var show=(f==='all'||card.dataset.topic===f);card.hidden=!show;if(show)shown++;});
+        empty.hidden=shown!==0;
+      });
+    });
+  })();
+</script>

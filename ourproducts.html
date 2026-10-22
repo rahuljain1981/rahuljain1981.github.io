@@ -8,6 +8,13 @@ keywords: Codeylabs, Our Products, Salesforce, solutions, accelerators, Agentfor
 ---
 
 
+
+<style>
+.cl-statchip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--cl-ink);background:var(--cl-yellow-l);border:1px solid #FFE7A1;padding:6px 12px;border-radius:999px;margin-bottom:14px;align-self:flex-start}
+.cl-statchip::before{content:"";width:8px;height:8px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 3px rgba(34,197,94,.2)}
+.cl-statchip--dark{background:rgba(255,206,49,.16);border-color:rgba(255,206,49,.35);color:var(--cl-yellow)}
+</style>
+
 <section class="cl-pagehero">
   <div class="cl-container">
     <h1>{{site.ourproducts | default: "Our Products"}}</h1>
@@ -198,6 +205,7 @@ keywords: Codeylabs, Our Products, Salesforce, solutions, accelerators, Agentfor
     <div class="cl-grid cl-grid--3">
       <article class="cl-pcard cl-pcard--dark cl-reveal" style="--d:0ms">
         <div class="cl-pcard__top"><span class="cl-pcard__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="6" rx="1.5"/><path d="M3 15h18M3 19h12"/></svg></span><span class="cl-flag cl-flag--free">Free</span></div>
+        <span class="cl-statchip cl-statchip--dark">10+ salesforce orgs</span>
         <h3>Record Page Header</h3>
         <p class="cl-pcard__tag">Enhanced data visibility &amp; engagement</p>
         <p class="cl-pcard__price">Freely Available on AppExchange</p>
@@ -212,6 +220,7 @@ keywords: Codeylabs, Our Products, Salesforce, solutions, accelerators, Agentfor
       </article>
       <article class="cl-pcard cl-pcard--dark cl-reveal" style="--d:140ms">
         <div class="cl-pcard__top"><span class="cl-pcard__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></span><span class="cl-flag cl-flag--free">Free</span></div>
+        <span class="cl-statchip cl-statchip--dark">25+ salesforce orgs</span>
         <h3>Lightning PDF Export</h3>
         <p class="cl-pcard__tag">Simple, one-click PDF exports</p>
         <p class="cl-pcard__price">Freely Available on AppExchange</p>

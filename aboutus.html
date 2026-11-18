@@ -9,16 +9,108 @@ ogimage: https://www.codeylabs.com/assets/img/CodeyLabsSuiteSite.jpg
 canonical: https://www.codeylabs.com/aboutus.html
 keywords: About CodeyLabs, CodeyLabs founder, Rahul Jain, Salesforce ISV partner, Salesforce solution architect, Salesforce-native solutions, professional services, managed packages, Jaipur
 ---
-<section class="cl-pagehero">
+<style id="cl-blog-post-styles">
+/* Self-contained styles for CodeyLabs blog posts (uses variables, header, footer and .cl-btn from base styles.css) */
+[hidden]{display:none!important}
+.cl-arrow{display:inline-block;margin-left:6px;transition:transform .2s}
+.cl-btn:hover .cl-arrow,a:hover>.cl-arrow{transform:translateX(4px)}
+.cl-section--tight{padding:56px 0}
+.cl-phero{padding:56px 0 52px;text-align:center;background:radial-gradient(800px 360px at 85% -25%,rgba(255,206,49,.38),transparent 60%),radial-gradient(640px 320px at 0% 0%,rgba(13,157,218,.16),transparent 60%),linear-gradient(180deg,#fff 0%,var(--cl-soft) 100%);border-bottom:1px solid var(--cl-line)}
+.cl-crumb{display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--cl-muted);margin-bottom:22px}
+.cl-crumb a{color:var(--cl-blue-d)!important}
+.cl-crumb a:hover{text-decoration:underline!important}
+.cl-crumb span[aria-hidden]{opacity:.5}
+.cl-phero h1{font-size:clamp(28px,4.2vw,48px);line-height:1.12;letter-spacing:-.025em;font-weight:800;color:var(--cl-ink);margin:0 auto 22px;max-width:900px}
+.cl-phero__sub{font-size:clamp(17px,2vw,20px);color:var(--cl-muted);max-width:760px;margin:-6px auto 22px}
+.cl-meta{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 14px}
+.cl-tag{font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:999px;background:var(--cl-soft);color:var(--cl-text);border:1px solid var(--cl-line)}
+.cl-tag--quotex{background:var(--cl-yellow-l);color:#7a5a00;border-color:#FFE7A1}
+.cl-tag--industry{background:rgba(13,157,218,.1);color:var(--cl-blue-d);border-color:rgba(13,157,218,.25)}
+.cl-tag--auto{background:#EEF1FF;color:#3b4bd1;border-color:#D7DCFF}
+.cl-read{font-size:14px;color:var(--cl-muted);font-weight:500}
+
+.cl-cover{max-width:960px;margin:-1px auto 0;padding:0 24px}
+.cl-cover img{display:block;width:100%;height:auto;max-height:480px;object-fit:cover;border-radius:24px;box-shadow:var(--cl-shadow-lg);border:6px solid #fff;margin-top:40px}
+
+.cl-article{max-width:760px;margin:0 auto;font-size:18.5px;line-height:1.85;color:var(--cl-text)}
+.cl-article p{margin:0 0 24px}
+.cl-article > p:first-child{font-size:21px;line-height:1.7;color:var(--cl-ink);font-weight:500}
+.cl-article strong,.cl-article b{color:var(--cl-ink)}
+.cl-article a{color:var(--cl-blue-d);text-decoration:underline}
+.cl-article h2{font-size:clamp(24px,3vw,32px);line-height:1.25;letter-spacing:-.015em;font-weight:800;color:var(--cl-ink);margin:52px 0 18px;padding-top:6px}
+.cl-article ul{list-style:none;margin:0 0 26px;padding:0}
+.cl-article ul li{position:relative;padding-left:32px;margin-bottom:14px}
+.cl-article ul li::before{content:"";position:absolute;left:0;top:8px;width:18px;height:18px;border-radius:50%;background:var(--cl-yellow-l) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B1220' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/11px no-repeat}
+.cl-callout{margin:36px 0;padding:26px 30px;background:var(--cl-yellow-l);border-left:5px solid var(--cl-yellow);border-radius:0 18px 18px 0}
+.cl-callout p{margin:0;font-size:20px;line-height:1.6;font-weight:600;color:var(--cl-ink)}
+
+.cl-author{max-width:760px;margin:56px auto 0;display:flex;gap:20px;align-items:center;background:var(--cl-soft);border:1px solid var(--cl-line);border-radius:22px;padding:26px 30px}
+.cl-author__ic{flex:none;width:56px;height:56px;border-radius:50%;background:var(--cl-yellow);display:grid;place-items:center;color:var(--cl-ink)}
+.cl-author__ic svg{width:26px;height:26px}
+.cl-author p{margin:0;font-size:16px;line-height:1.6}
+.cl-author p:first-child{font-weight:800;color:var(--cl-ink);font-size:17px;margin-bottom:4px}
+.cl-author a{color:var(--cl-blue-d);font-weight:600;text-decoration:underline}
+@media (max-width:600px){
+  .cl-article{font-size:17.5px}.cl-article > p:first-child{font-size:19px}
+  .cl-callout{padding:20px 20px}.cl-callout p{font-size:18px}
+  .cl-author{flex-direction:column;align-items:flex-start;padding:22px}
+}
+.cl-reveal{opacity:1;transform:none}
+</style>
+
+<section class="cl-phero">
   <div class="cl-container">
-    <h1>About Us</h1>
-    <p>The people behind CodeyLabs</p>
+    <div class="cl-crumb">
+      <a href="/">Home</a> <span aria-hidden=">">/</span> <span>About Us</span>
+    </div>
+    <h1>About CodeyLabs</h1>
+    <p class="cl-phero__sub">100% Salesforce-native solutions built to streamline professional services and enterprise operations</p>
   </div>
 </section>
 
 <section class="cl-section">
   <div class="cl-container">
-    <article class="cl-profile cl-reveal">
+    <div class="cl-article cl-reveal">
+      
+      <p>CodeyLabs is an official Salesforce Independent Software Vendor (ISV) Partner dedicated to building 100% Salesforce-native managed packages and accelerators that simplify complex enterprise workflows.</p>
+
+      <h2>What We Specialize In</h2>
+      <p>Founded on over 18 years of enterprise cloud consulting experience, we engineer zero-dependency, low-code applications tailored to solve critical operational bottlenecks across pre-sales, document automation, service delivery, and user experience:</p>
+      <ul>
+        <li><strong>QuoteX (Pre Sales Cloud):</strong> Multi-dimensional project scoping, resource estimation, and margin protection built to bridge the gap between pre-sales quoting and post-sales delivery.</li>
+        <li><strong>DRTE (Dynamic Rich Text Editor):</strong> Pure 100% Salesforce-native document and PDF generation with built-in e-signatures, dynamic email dispatch, and complete audit trails—requiring zero external servers or Word document dependencies.</li>
+        <li><strong>Build Your Own Branding (BYOB Suite):</strong> Native UI customization tools, including dynamic branding sets, field label overrides, and list view row highlights.</li>
+        <li><strong>Feedback 360 (F360) &amp; Service Assurance Hub:</strong> Native survey engines with conditional question routing, internal timed assessments, and proactive service delivery tracking.</li>
+      </ul>
+
+      <div class="cl-callout">
+        <p>“Enterprise productivity tools should never compromise data governance. Keeping everything 100% native to Salesforce is non-negotiable.”</p>
+      </div>
+
+      <h2>Why Choose CodeyLabs</h2>
+      <ul>
+        <li><strong>100% Salesforce-Native Architecture:</strong> Every solution runs natively on the Salesforce platform with no connected apps, external databases, or third-party integrations. Your sensitive customer and deal data never leaves your Salesforce org.</li>
+        <li><strong>Practical, Adoption-First Design:</strong> Built from real-world consulting insights, our tools prioritize intuitive interfaces and self-service configuration so teams can deploy fast.</li>
+        <li><strong>Predictable Per-User Subscription:</strong> Accessible, scalable per-user/per-month licensing designed to deliver rapid ROI without hidden infrastructure overhead.</li>
+      </ul>
+
+      <h2>Our Values &amp; Goals</h2>
+      <ul>
+        <li><strong>Security &amp; Trust First:</strong> Total compliance and data safety inside the Salesforce boundary.</li>
+        <li><strong>Pragmatic Simplicity:</strong> Replacing clunky workarounds and disconnected spreadsheets with clean, user-friendly solutions.</li>
+        <li><strong>Customer-Driven Innovation:</strong> Evolving alongside modern Salesforce capabilities—including native Agentforce and AI-assisted workflows—to help service organizations protect margins and scale smoothly.</li>
+      </ul>
+
+      <h2>Recognition &amp; Milestones</h2>
+      <ul>
+        <li><strong>Official Salesforce ISV Partner:</strong> Recognized partner with security-reviewed, AppExchange-published solutions engineered to strict platform standards.</li>
+        <li><strong>Trusted by Global Services Teams:</strong> Adopted by growing Salesforce consulting and professional services organizations to standardize fixed-fee scoping and accelerate deal cycles.</li>
+      </ul>
+
+    </div>
+
+    <!-- Founder Profile Section -->
+     <article class="cl-profile cl-reveal">
       <img class="cl-profile__img" src="/assets/img/rahuljain.png" alt="Rahul Jain" loading="lazy">
       <div class="cl-profile__body">
         <h2>RAHUL JAIN</h2>
@@ -28,5 +120,6 @@ keywords: About CodeyLabs, CodeyLabs founder, Rahul Jain, Salesforce ISV partner
         <a class="cl-btn cl-btn--linkedin cl-btn--sm" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&amp;followMember=rahuljain81" target="_blank" rel="noopener">Follow on LinkedIn</a>
       </div>
     </article>
+
   </div>
 </section>

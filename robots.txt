@@ -6,6 +6,19 @@
 User-agent: *
 Allow: /
 
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+
 # Add the URL to your sitemap here.
 # This helps search engines discover all the pages on your site.
 Sitemap: https://www.codeylabs.com/sitemap.xml

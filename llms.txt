@@ -1,0 +1,20 @@
+# CodeyLabs
+
+> CodeyLabs builds 100% Salesforce-native AppExchange applications and provides custom Salesforce architecture and ISV development services. All products run natively on the Salesforce platform with zero external servers, connected apps, or third-party data storage.
+
+## Core Products (AppExchange Managed Packages)
+
+- [QuoteX (Pre Sales Cloud)](https://www.codeylabs.com/): Salesforce-native services scoping, estimation, and quoting solution designed to streamline fixed-fee deals and protect delivery margins. Includes scope libraries, resource planning, and Agentforce/MCP AI-assisted quoting.
+- [DRTE (Dynamic Rich Text Editor & Document Engine)](https://www.codeylabs.com/): 100% Salesforce-native document generation and e-signature solution with full audit trails, conditional templating, multi-language support, and native exports (PDF, DOCX, XLSX, PPTX) without external integrations or Word dependencies.
+- [Build Your Own Branding (BYOB Suite)](https://www.codeylabs.com/): UI customization and branding toolkit for Salesforce Lightning and Experience Cloud, including List View Row Highlights and Field Label Overrider.
+- [Feedback 360 (F360)](https://www.codeylabs.com/): Native Salesforce survey, conditional question routing, and timed internal mock-test assessment engine.
+
+## Documentation & Support
+
+- [CodeyLabs Knowledge Hub](https://help.codeylabs.com/): Complete administrator guides, setup tutorials, release notes, and architectural documentation for QuoteX, DRTE, BYOB, and F360.
+- [Contact & Custom Services](https://www.codeylabs.com/): Custom AppExchange managed package development (1GP/2GP), security review preparation, and Salesforce consulting.
+
+## Architecture & Security Principles
+
+- **100% Native Architecture:** Built exclusively using Apex, Lightning Web Components (LWC), Visualforce, and Salesforce Flows.
+- **Data Residency & Security:** Customer data never leaves the subscriber's Salesforce org. No external middleware, third-party APIs, or off-platform databases.

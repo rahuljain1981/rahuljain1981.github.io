@@ -27,22 +27,6 @@
 
    <!-- Example Blog Post -->
    <url>
-      <loc>https://www.codeylabs.com/agentforceforpresales.html</loc>
-      <lastmod>2026-08-02T11:26:58+00:00</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-   </url>
-
-   <!-- Example Blog Post -->
-   <url>
-      <loc>https://www.codeylabs.com/crc.html</loc>
-      <lastmod>2026-08-02T11:26:58+00:00</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-   </url>
-
-   <!-- Example Blog Post -->
-   <url>
       <loc>https://drte.codeylabs.com/</loc>
       <lastmod>2026-08-02T11:26:58+00:00</lastmod>
       <changefreq>weekly</changefreq>
@@ -57,50 +41,221 @@
       <priority>0.9</priority>
    </url>
 
-   <!-- Example Blog Post -->
+
+   
+  
+   <url>
+      <loc>https://www.codeylabs.com/index.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+
+   <!-- Core Company & Product Pages -->
+   <url>
+      <loc>https://www.codeylabs.com/aboutus.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/meetceo.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
    <url>
       <loc>https://www.codeylabs.com/ourproducts.html</loc>
       <lastmod>2026-08-02T11:26:58+00:00</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
-
-   <!-- Example Blog Post -->
    <url>
-      <loc>https://www.codeylabs.com/sujmp.html</loc>
-      <lastmod>2026-08-02T11:26:58+00:00</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-   </url>
-
-
-   <!-- About Us Page -->
-   <url>
-      <loc>https://www.codeylabs.com/aboutus.html</loc>
-      <lastmod>2026-08-01T11:26:58+00:00</lastmod>
+      <loc>https://www.codeylabs.com/agentforceforpresales.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
+   <url>
+      <loc>https://www.codeylabs.com/agentforcepresales.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/quotexperience.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/lightningpdfgenerator.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/pdfexport.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/dynamicrichtexteditor.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/feedback360.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/brandingsets.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/crc.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/sujmp.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/technology-enabled-services.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/subscription.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
 
+   <!-- Community, Partners, Support & Events -->
+   <url>
+      <loc>https://www.codeylabs.com/partners.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/community.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/events.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/careers.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/support.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/schedule.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
 
-   <!-- About Us Page -->
+   <!-- Blog & Articles -->
+   <url>
+      <loc>https://www.codeylabs.com/blog.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
    <url>
       <loc>https://www.codeylabs.com/blogs.html</loc>
-      <lastmod>2026-08-01T11:26:58+00:00</lastmod>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>0.4</priority>
+      <priority>0.7</priority>
    </url>
-
-
-
-   <!-- Example Blog Post -->
    <url>
-      <loc>https://lpg.codeylabs.com/lpg.html</loc>
-      <lastmod>2026-10-02T11:26:58+00:00</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.1</priority>
+      <loc>https://www.codeylabs.com/blogautomatedtimeline.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
    </url>
-   
+   <url>
+      <loc>https://www.codeylabs.com/blogquotexpresalessuccess.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/blogquotexprojectsuccess.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/blogrevenueslippage.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/blogscopingchallenges.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/blogservicescpqcomparison.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/blogtechnologyarbitrage.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/blogvhr.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+
+   <!-- Legal -->
+   <url>
+      <loc>https://www.codeylabs.com/privacypolicy.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.3</priority>
+   </url>
+   <url>
+      <loc>https://www.codeylabs.com/terms.html</loc>
+      <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.3</priority>
+   </url>
 
   
 </urlset>
